@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+{%block title%}SignUP{%endblock%}
+
+
+
+{%block content%}
+<div>
+    <form method="post" action="">
+        {% csrf_token %}
+        <input type="text" id= "username" name="username" placeholder="Unique name">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="text" name="college" id="college" placeholder="College Name">
+        <input type="text" name="branch" id="branch" placeholder="Branch">
+        <input type="number" name="year" id="year" placeholder="Year">
+        <input type="password" name="password" id="password" placeholder="Abc123@#$">
+        <input type="password" name="cpassword" id="cpassword" placeholder="confirm password">
+
+        <input type="submit" value="SignUP">
+
+
+
+    </form>
+</div>
+{%endblock%}
