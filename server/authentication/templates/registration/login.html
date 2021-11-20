@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Login{%endblock%}
+{% block content %}
+
+
+{% if next %}
+{% if user.is_authenticated %}
+<p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+{% else %}
+<p>Please login to see this page.</p>
+{% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <input type="text" id="username" name="username" placeholder="Unique name">
+            <input type="password" name="password" id="password" placeholder="Abc123@#$">
+        
+
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="{{ next }}">
+</form>
+
+
+
+{% endblock %}

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { useStyles } from "./ProfileStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +15,20 @@ import { Link } from "react-router-dom";
 
 const Profile = () => {
   const classes = useStyles();
+
+  let[prof, setProf] = useState([])
+
+  useEffect(() =>{
+    getProf()
+  }, [])
+
+  let getProf = async () => {
+    let response = await fetch('http://127.0.0.1:8000/profile/')
+    let data = await response.json()
+    setProf(data)
+  }
+
+
   return (
     <div>
       <Grid
@@ -41,7 +55,7 @@ const Profile = () => {
           <Grid container style={{ marginTop: "13vh" }}>
             <Grid item>
               <Typography style={{ fontWeight: "bold" }} variant="h4">
-                Priya Aggarwal
+                {prof.name}
               </Typography>
             </Grid>
           </Grid>
@@ -49,12 +63,12 @@ const Profile = () => {
             <Grid item lg={6} md={6} xs={6} sm={6}>
               <Grid container>
                 <Grid item>
-                  <Typography variant="caption">City</Typography>
+                  <Typography variant="caption">Branch</Typography>
                 </Grid>
               </Grid>
               <Grid container>
                 <Grid item>
-                  <Typography variant="h6">Ellenabad</Typography>
+                  <Typography variant="h6">{prof.branch}</Typography>
                 </Grid>
               </Grid>
             </Grid>
@@ -66,7 +80,7 @@ const Profile = () => {
               </Grid>
               <Grid container>
                 <Grid item>
-                  <Typography variant="h6">Thapar Institute</Typography>
+                  <Typography variant="h6">{prof.college}</Typography>
                 </Grid>
               </Grid>
             </Grid>
