@@ -21,15 +21,31 @@ const LoginForm = (props) => {
   const [signup, setSignup] = useState(null);
   let[status, setStatus] = useState(['None'])
 
-  
+  let[user, setUser] = useState([])
 
   useEffect(() =>{
-    getStatus()
+    getUser()
   }, [])
 
+  let getUser = async () => {
+    let response = await fetch('http://127.0.0.1:8000/login/')
+    let data = await response.json()
+    setUser(data)
+  }
+
+  
+
+  
+
   let getStatus = async () => {
+    
+    
+    
+    if(status=='Done'){
+      window.location.replace('/profile/')
+    }
     let item= {username,password}
-    let data= await fetch('http://127.0.0.1:8000/login/',{
+    await fetch('http://127.0.0.1:8000/login/',{
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -38,9 +54,14 @@ const LoginForm = (props) => {
       
     })
     
+    
 
-    setStatus(status.status)
+    
   }
+
+  
+
+  
 
 
   let handlebuttonSignup = () => {
@@ -49,17 +70,22 @@ const LoginForm = (props) => {
 
   let handlebuttonlogin = () => {
     getStatus()
-    if(status=='Done'){
-      window.location.replace('/profile/')
-    }
+    
+  
+    
     
   };
+  if(user=="Already Logged in"){
+    return(
+      <h1>Youre already logged in</h1>
+    )
+  }
   return (
     <div className="wrapper">
       <div className="form">
         <h1 className="title">PDF Finder</h1>
         {/* <h4 className="head2">Log in</h4> */}
-        <form action="/profile/" onSubmit= 'return handlebuttonlogin()'>
+        <form onSubmit= 'return handlebuttonlogin()'>
           {/* <button onClick={signInWithGoogle}>Sign in with google</button> */}
           <input
             type="text"

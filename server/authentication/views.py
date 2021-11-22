@@ -11,9 +11,12 @@ from .authenticate_backend import HashedPasswordAuthBackend as checkauth
 from main import views as v
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-
+from rest_framework import status
 
 current_user=None
+login_status="None"
+username=""
+password=""
 
 @api_view(['POST'])
 def signup(request):
@@ -64,31 +67,52 @@ def signup(request):
             return render(request, "login.html")
 
     return render(request, "login.html")'''
-@api_view(['POST'])
+@api_view(['GET','POST'])
 def login_page(request):
     global current_user
-    data= request.data
-    print(data)
-    
-    username = data['username']
-    password = data['password']
-    
-    p=checkauth()
-    
-    user = p.authenticate(username=username, password=password)
-    current_user=user
-    print(user)
-    if user:
-        auth.login(request, user,backend='django.contrib.auth.backends.ModelBackend')
-        if user.is_authenticated:
-            status=[{'Status':'Done'}]
-            
-            return Response(status)
+    global login_status
+    global username
+    global password
+    if(request.method=="GET"):
+        if not(current_user==None):
+            login_status=('Already Logged in')
         
-    else:
-        status=[{'Status':'None'}]
+        return Response(login_status)
             
-        return Response(status)
+    if(request.method=="POST"):
+    
+        data= request.data
+        print(data)
+        if not(data==[{}]):
+
+            username = data['username']
+            password = data['password']
+        else:
+            username= ""
+            password= ""
+        p=checkauth()
+        
+        user = p.authenticate(username=username, password=password)
+        current_user=user
+        print(user)
+        if user:
+            auth.login(request, user,backend='django.contrib.auth.backends.ModelBackend')
+            if user.is_authenticated:
+                login_status='Done'
+                
+            else:
+                login_status='None'
+                
+            
+            
+        else:
+            login_status='None'
+            
+        
+        return Response('None')
+        
+        
+        
 
         
 
