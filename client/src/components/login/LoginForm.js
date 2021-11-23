@@ -77,7 +77,7 @@ const LoginForm = (props) => {
   };
   if(user=="Already Logged in"){
     return(
-      <h1>Youre already logged in</h1>
+      window.location.replace('/landing/')
     )
   }
   return (
