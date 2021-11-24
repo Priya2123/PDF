@@ -28,8 +28,9 @@ const Profile = () => {
     setProf(data)
   }
 
+  if (prof !='None'){
 
-  return (
+    return (
     <div>
       <Grid
         container
@@ -159,6 +160,14 @@ const Profile = () => {
       </Grid>
     </div>
   );
+
+  }
+  else{
+
+    window.location.replace('/login/')
+  
+  }
+  
 };
 
 export default Profile;
