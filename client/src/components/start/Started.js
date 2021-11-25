@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import Nav from "../nav/Nav";
 import { Grid, Typography, Button } from "@material-ui/core";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
@@ -8,9 +8,25 @@ import { useStyles } from "./StartedStyles";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import Contact from "../contact/Contact";
+import { faWindowRestore } from "@fortawesome/free-solid-svg-icons";
 
 const Started = () => {
   const classes = useStyles();
+
+
+  let[user, setUser] = useState([])
+
+  useEffect(() =>{
+    getUser()
+  }, [])
+
+  let getUser = async () => {
+    let response = await fetch('http://127.0.0.1:8000/login/')
+    let data = await response.json()
+    setUser(data)
+  }
+
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -19,6 +35,8 @@ const Started = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  if(user=='None')
+  {
   return (
     <>
       <Nav />
@@ -118,6 +136,10 @@ const Started = () => {
       </Parallax>
     </>
   );
+        }
+  else{
+   window.location.replace('/landing/')
+  }
 };
 
 export default Started;
