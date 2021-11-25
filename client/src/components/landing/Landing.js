@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import {
   Grid,
   Typography,
@@ -16,6 +16,21 @@ import { Link } from "react-router-dom";
 
 const Landing = () => {
   const classes = useStyles();
+
+  let[prof, setProf] = useState([])
+
+  useEffect(() =>{
+    getProf()
+  }, [])
+
+  let getProf = async () => {
+    let response = await fetch('http://127.0.0.1:8000/profile/')
+    let data = await response.json()
+    setProf(data)
+  }
+
+  if(prof!='None')
+  {
   return (
     <div style={{ backgroundColor: "#271e2a", minHeight: "100vh" }}>
       <NavLanding />
@@ -239,6 +254,10 @@ const Landing = () => {
       </Grid>
       <div></div>
     </div>
-  );
+  );}
+
+  else{
+    window.location.replace('/login/')
+  }
 };
 export default Landing;
