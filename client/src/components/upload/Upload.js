@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { useStyles } from "./UploadStyles";
 import NavUpload from "../navUpload/NavUpload";
@@ -13,18 +13,92 @@ const Upload = () => {
   const {
     register,
     errors,
-    handleSubmit,
+    
     getValues,
     // formState: { errors },
   } = useForm();
+
+  let[name, setName] = useState([])
+  let[descrip, setDescrip] = useState([])
+  let[branch, setBranch] = useState([])
+  let[year, setYear] = useState([])
+  let[college, setCollege] = useState([])
+  let[subj, setSubj] = useState([])
+  let[file, setFile] = useState([null])
   // useForm({
   //   mode: "onChange",
   // });
   // const atLeastOne = () =>
   //   getValues("test").length ? true : "Please tell me if this is too hard.";
-  const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+
+  let[user, setUser] = useState([])
+
+  useEffect(() =>{
+    getUser()
+  }, [])
+
+  let getUser = async () => {
+    let response = await fetch('http://127.0.0.1:8000/login/')
+    let data = await response.json()
+    setUser(data)
+  }
+
+  let[status, setStatus] = useState([])
+
+  useEffect(() =>{
+    getStatus()
+  }, [])
+
+  let getStatus = async () => {
+    let response = await fetch('http://127.0.0.1:8000/upload/')
+    let data = await response.json()
+    setStatus(data)
   };
+
+  
+
+  if(status=="created"){
+    window.location.replace('/download/')
+  }
+  if(user=="None"){
+    window.location.replace('/login/')
+  }
+
+
+  let sendPost = async () => {
+    
+    
+    
+    if(status=='Done'){
+      window.location.replace('/download/')
+    }
+
+    var bdata = new FormData();
+    var pdfdata = document.querySelector('input[type="file"]').files[0];
+    bdata.append("data", pdfdata);
+    let item= {name,descrip,branch,year,subj,college,bdata}
+    await fetch('http://127.0.0.1:8000/upload/',{
+      method: "POST",
+      
+      body: JSON.stringify(item),
+      
+    })
+    
+    
+
+    
+  }
+
+
+let handleSubmit = () => {
+    sendPost()
+    
+  
+    
+    
+  };
+
+  
   console.log(errors);
   return (
     <div style={{ backgroundColor: "#290d44", minHeight: "100vh" }}>
@@ -56,67 +130,47 @@ const Upload = () => {
                 justify="center"
                 className={classes.form}
               >
-                <form onSubmit={handleSubmit(onSubmit)}>
-                  <label>First name</label>
+                <form encType="multipart/form-data" onSubmit={sendPost}>
+                  <label>PDF name</label>
                   <input
                     type="text"
-                    {...register("First name", {
-                      required: true,
-                      maxLength: 80,
-                    })}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
-                  <label>Last name</label>
+                  <label>Description</label>
                   <input
                     type="text"
-                    {...register("Last name", {
-                      required: true,
-                      maxLength: 100,
-                    })}
+                    value={descrip}
+                    onChange={(e) => setDescrip(e.target.value)}
                   />
-                  <label>Email</label>
-                  <input
-                    type="text"
-                    {...register("Email", {
-                      required: true,
-                      pattern:
-                        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                    })}
-                  />
-                  <label>Mobile number</label>
-                  <input
-                    type="tel"
-                    {...register("Mobile number", {
-                      required: true,
-                      maxLength: 11,
-                      minLength: 8,
-                    })}
-                  />
+                  
                   <label>College</label>
                   <input
                     type="text"
-                    {...register("College", { required: true, maxLength: 500 })}
+                    value={college}
+                    onChange={(e) => setCollege(e.target.value)}
                   />
                   <label>Year</label>
                   <input
                     type="tel"
-                    {...register("Year", {
-                      required: true,
-                      maxLength: 11,
-                      minLength: 1,
-                    })}
+                    value={year}
+                    onChange={(e) => setYear(e.target.value)}
                   />
                   <label>Branch of PDF</label>
                   <input
                     type="text"
-                    {...register("branch", { required: true, maxLength: 500 })}
+                    value={branch}
+                    onChange={(e) => setBranch(e.target.value)}
                   />
                   <label>Subject of PDF</label>
                   <input
                     type="text"
-                    {...register("subject", { required: true, maxLength: 500 })}
+                    value={subj}
+                    onChange={(e) => setSubj(e.target.value)}
                   />
                   <label>Upload PDF</label>
                   <input type="file" name="pdf" style={{ color: "white" }} />
+
                   {/* <label>Title</label>
                 <select
                   name="Title"
@@ -129,7 +183,7 @@ const Upload = () => {
                   <option value="Miss">Miss</option>
                   <option value="Dr">Dr</option>
                 </select> */}
-                  <label>Have you read all the instructions?</label>
+                  
                   {/* <input
                   key={value}
                   type="checkbox"
@@ -138,11 +192,7 @@ const Upload = () => {
                     validate: atLeastOne,
                   })}
                 /> */}
-                  <input
-                    type="radio"
-                    value="Yes"
-                    {...register("read", { required: true })}
-                  />
+                  
                   {/* <div
                   style={{
                     display: "flex",
@@ -164,12 +214,8 @@ const Upload = () => {
                     Yes
                   </label>
                 </div> */}
-                  <input
-                    type="radio"
-                    value="No"
-                    {...register("read", { required: true })}
-                  />
-                  <button type="reset">Submit</button>
+                  
+                  <button type="reset" onClick={sendPost}>Submit</button>
                   {/* <input type="reset" type="submit" /> */}
                 </form>
               </Grid>

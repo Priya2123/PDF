@@ -41,7 +41,7 @@ const LoginForm = (props) => {
     
     
     
-    if(status=='Done'){
+    if(status=='created'){
       window.location.replace('/profile/')
     }
     let item= {username,password}
