@@ -7,12 +7,16 @@ import {
   CardActions,
   CardContent,
   Button,
+  Paper,
 } from "@material-ui/core";
 import { useStyles } from "./LandingStyles";
 import NavLanding from "../navlanding/NavLanding";
 import Searchbar from "../search/Searchbar";
 import pdf1 from "../../assets/priya_resume.pdf";
 import { Link } from "react-router-dom";
+import search from "../../assets/search.png";
+import download from "../../assets/download.png";
+import upload from "../../assets/upload.png";
 
 const Landing = () => {
   const classes = useStyles();
@@ -32,12 +36,93 @@ const Landing = () => {
           <Searchbar />
         </Grid>
       </Grid>
+      <Grid container justify="center">
+        <Grid item lg={10} md={10} justify="center">
+          <Paper
+            style={{
+              backgroundColor: "#0f0015",
+              marginBottom: "15vh",
+              marginTop: "6vh",
+            }}
+            elevation={4}
+          >
+            <Grid
+              container
+              lg={12}
+              md={12}
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                paddingTop: "3vh",
+                // paddingBottom: "3vh",
+              }}
+              justify="center"
+            >
+              {/* <Grid item lg={4} md={4}> */}
+              <div style={{ textAlign: "center" }}>
+                <img
+                  style={{
+                    height: "60%",
+                    width: "18vw",
+                    // padding: "2rem",
+                  }}
+                  src={search}
+                  alt="/"
+                />
+                <Typography variant="h5" className={classes.text}>
+                  Search
+                </Typography>
+                <Typography variant="body1" className={classes.text}>
+                  the documents you need
+                </Typography>
+              </div>
+              {/* </Grid> */}
+              {/* <Grid item lg={4} md={4} spacing={4}> */}
+              <div style={{ textAlign: "center" }}>
+                <img
+                  style={{ height: "60%", width: "27vw" }}
+                  src={download}
+                  alt="/"
+                />
+                <Typography variant="h5" className={classes.text}>
+                  Download
+                </Typography>
+                <Typography variant="body1" className={classes.text}>
+                  the material and study to boost your <br /> preparation from
+                  various colleges
+                </Typography>
+              </div>
+              {/* </Grid> */}
+              {/* <Grid item lg={4} md={4} spacing={4}> */}
+              <div style={{ textAlign: "center" }}>
+                <img
+                  style={{
+                    height: "60%",
+                    width: "20vw",
+                    // padding: "2rem",
+                    // marginLeft: "8vw",
+                  }}
+                  src={upload}
+                  alt="/"
+                />
+                <Typography variant="h5" className={classes.text}>
+                  Upload
+                </Typography>
+                <Typography variant="body1" className={classes.text}>
+                  the material to help others
+                </Typography>
+              </div>
+              {/* </Grid> */}
+            </Grid>
+          </Paper>
+        </Grid>
+      </Grid>
       <Grid
         container
         lg={12}
         md={12}
         justify="center"
-        style={{ marginTop: "2%" }}
+        // style={{ marginTop: "2%" }}
       >
         <Grid item lg={11} md={11}>
           <Typography className={classes.heading} variant="h4">
