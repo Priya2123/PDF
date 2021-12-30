@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, Typography, Paper } from "@material-ui/core";
 import { useStyles } from "./LandingStyles";
 import NavLanding from "../navlanding/NavLanding";
