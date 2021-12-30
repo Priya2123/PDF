@@ -161,11 +161,21 @@ const Landing = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link to="/doc">
-                <Button className={classes.cardbutton} size="small">
-                  Get PDFs
-                </Button>
-              </Link>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link to="/doc">
+                  <Button className={classes.cardbutton} size="small">
+                    Get PDFs
+                  </Button>
+                </Link>
+                <Typography variant="body1">(30)</Typography>
+              </div>
             </CardActions>
           </Card>
         </Grid>
@@ -199,11 +209,21 @@ const Landing = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link to="/doc">
-                <Button className={classes.cardbutton} size="small">
-                  Get PDFs
-                </Button>
-              </Link>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link to="/doc">
+                  <Button className={classes.cardbutton} size="small">
+                    Get PDFs
+                  </Button>
+                </Link>
+                <Typography variant="body1">(30)</Typography>
+              </div>
             </CardActions>
           </Card>
         </Grid>
@@ -237,11 +257,21 @@ const Landing = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link to="/doc">
-                <Button className={classes.cardbutton} size="small">
-                  Get PDFs
-                </Button>
-              </Link>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link to="/doc">
+                  <Button className={classes.cardbutton} size="small">
+                    Get PDFs
+                  </Button>
+                </Link>
+                <Typography variant="body1">(30)</Typography>
+              </div>
             </CardActions>
           </Card>
         </Grid>
@@ -275,11 +305,21 @@ const Landing = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link to="/doc">
-                <Button className={classes.cardbutton} size="small">
-                  Get PDFs
-                </Button>
-              </Link>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link to="/doc">
+                  <Button className={classes.cardbutton} size="small">
+                    Get PDFs
+                  </Button>
+                </Link>
+                <Typography variant="body1">(30)</Typography>
+              </div>
             </CardActions>
           </Card>
         </Grid>
@@ -313,11 +353,21 @@ const Landing = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link to="/doc">
-                <Button className={classes.cardbutton} size="small">
-                  Get PDFs
-                </Button>
-              </Link>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link to="/doc">
+                  <Button className={classes.cardbutton} size="small">
+                    Get PDFs
+                  </Button>
+                </Link>
+                <Typography variant="body1">(30)</Typography>
+              </div>
             </CardActions>
           </Card>
         </Grid>
