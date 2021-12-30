@@ -1,17 +1,8 @@
 import React from "react";
-import {
-  Grid,
-  Typography,
-  Card,
-  CardActions,
-  CardContent,
-  Button,
-  Paper,
-} from "@material-ui/core";
+import { Grid, Typography, Paper } from "@material-ui/core";
 import { useStyles } from "./LandingStyles";
 import NavLanding from "../navlanding/NavLanding";
 import Searchbar from "../search/Searchbar";
-import { Link } from "react-router-dom";
 import search from "../../assets/search.png";
 import download from "../../assets/download.png";
 import upload from "../../assets/upload.png";
