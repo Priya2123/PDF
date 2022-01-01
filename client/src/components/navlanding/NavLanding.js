@@ -5,6 +5,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import Tooltip from "@mui/material/Tooltip";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -99,6 +101,11 @@ export default function ButtonAppBar() {
               My Profile
             </Button>
           </Link>
+          <div>
+            <Tooltip title="Logout" placement="bottom">
+              <ExitToAppIcon style={{ cursor: "pointer", color: "white" }} />
+            </Tooltip>
+          </div>
         </Toolbar>
       </AppBar>
     </div>
