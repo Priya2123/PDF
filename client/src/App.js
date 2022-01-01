@@ -9,6 +9,7 @@ import {
   Profile,
   Login,
   Signup,
+  Signuplogin,
 } from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -32,6 +33,7 @@ const App = () => {
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/signuplogin" component={Signuplogin} />
         </Switch>
       </Router>
     </>
