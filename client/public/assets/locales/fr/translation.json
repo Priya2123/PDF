@@ -12,5 +12,10 @@
     "download_description": "le matériel et l'étude pour booster votre préparation de divers collèges",
     "upload": "Télécharger",
     "upload_description": "le matériel pour aider les autres",
+    "my_profile":"Mon profil",
+    "footer_connect":"RELIER",
+    "footer_feedback":"Rétroaction",
+    "footer_support":"Soutien",
+    "footer_web":"AUTOUR DU WEB",
     "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo"
   }

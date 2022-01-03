@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Tooltip from "@mui/material/Tooltip";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <div className={classes.root}>
@@ -79,7 +81,7 @@ export default function ButtonAppBar() {
           <Link to="/" className={classes.link}>
             {" "}
             <Button color="inherit" className={classes.button}>
-              Home
+              {t("home")}
             </Button>
           </Link>
           <Link to="/landing">
@@ -88,7 +90,7 @@ export default function ButtonAppBar() {
               className={classes.button}
               style={{ marginLeft: "1%", zIndex: "101" }}
             >
-              Download
+              {t("download")}
             </Button>
           </Link>
           <Link to="/profile">
@@ -98,7 +100,7 @@ export default function ButtonAppBar() {
               className={classes.button}
               style={{ marginLeft: "1%", zIndex: "101" }}
             >
-              My Profile
+              {t("my_profile")}
             </Button>
           </Link>
           <div>

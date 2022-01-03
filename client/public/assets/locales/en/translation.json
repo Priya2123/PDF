@@ -12,5 +12,10 @@
     "download_description": "the material and study to boost your preparation from various colleges",
     "upload":"Upload",
     "upload_description": "the material to help others",
+    "my_profile":"My Profile",
+    "footer_connect":"CONNECT",
+    "footer_feedback":"Feedback",
+    "footer_support":"Support",
+    "footer_web":"AROUND THE WEB",
     "days_since_release": "it's been {{number_of_days}} days since this video was released"
   }
