@@ -75,6 +75,7 @@ const Feedback = (props) => {
                       //   style={{ height: "2vh", width: "20%" }}
                       size="large"
                       onChange={(event, newValue) => {
+                        event.preventDefault();
                         setValue(newValue);
                       }}
                     />
@@ -106,7 +107,7 @@ const Feedback = (props) => {
                 justify="center"
                 style={{ paddingTop: "6%" }}
               >
-                <Grid item lg={10} md={10}>
+                <Grid item lg={4} md={4}>
                   <Button
                     variant="contained"
                     style={{

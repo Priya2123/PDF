@@ -9,6 +9,7 @@ import Profile from "./profile/Profile";
 import Login from "./login/LoginForm";
 import Signup from "./login/Signup";
 import Signuplogin from "./signup/Signup";
+import Feedback from "./feedback/Feedback";
 
 export {
   Nav,
@@ -22,4 +23,5 @@ export {
   Login,
   Signup,
   Signuplogin,
+  Feedback,
 };

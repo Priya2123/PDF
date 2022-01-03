@@ -6,6 +6,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const classes = useStyles();
@@ -26,13 +27,15 @@ const Footer = () => {
           CONNECT
         </Typography>
         <hr width="50%" align="center" size="5" style={{ margin: "auto" }} />
-        <Typography
-          variant="body1"
-          className={classes.text}
-          style={{ marginTop: "4%" }}
-        >
-          Feedback
-        </Typography>
+        <Link to="/feedback">
+          <Typography
+            variant="body1"
+            className={classes.text}
+            style={{ marginTop: "4%" }}
+          >
+            Feedback
+          </Typography>
+        </Link>
         {/* <Divider
           style={{ backgroundColor: "white", width: "40%" }}
           variant="middle"
