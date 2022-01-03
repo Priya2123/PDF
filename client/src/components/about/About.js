@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import priya from "../../assets/priya3.jfif";
 import mahi from "../../assets/mahi.jfif";
 import rishi from "../../assets/rishi.jfif";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const classes = useStyles();
@@ -19,6 +20,7 @@ const About = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  const { t } = useTranslation();
   return (
     <div style={{ backgroundColor: "#000" }}>
       <Nav />
@@ -36,7 +38,7 @@ const About = () => {
                 className={classes.text}
                 style={{ marginBottom: "2%", fontWeight: "bold" }}
               >
-                ABOUT US
+                {t("about")}
               </Typography>
               <Typography variant="body1" className={classes.text}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

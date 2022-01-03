@@ -31,7 +31,7 @@ const Signup = () => {
       justify="center"
     >
       <Grid item lg={8} md={8}>
-        <Lottie style={{}} options={defaultOptions} />
+        <Lottie options={defaultOptions} />
       </Grid>
       <Grid item lg={4} md={4}>
         <form>

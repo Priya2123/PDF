@@ -8,9 +8,11 @@ import download from "../../assets/download.png";
 import upload from "../../assets/upload.png";
 import LandingCard from "./LandingCard";
 import Footer from "../footer/Footer";
+import { useTranslation } from "react-i18next";
 
 const Landing = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   const pdfList = [
     {
@@ -96,10 +98,14 @@ const Landing = () => {
                   alt="/"
                 />
                 <Typography variant="h5" className={classes.text}>
-                  Search
+                  {t("search")}
                 </Typography>
-                <Typography variant="body1" className={classes.text}>
-                  the documents you need
+                <Typography
+                  variant="body1"
+                  className={classes.text}
+                  style={{ maxWidth: "30vw" }}
+                >
+                  {t("search_description")}
                 </Typography>
               </div>
               <div style={{ textAlign: "center" }}>
@@ -109,11 +115,14 @@ const Landing = () => {
                   alt="/"
                 />
                 <Typography variant="h5" className={classes.text}>
-                  Download
+                  {t("download")}
                 </Typography>
-                <Typography variant="body1" className={classes.text}>
-                  the material and study to boost your <br /> preparation from
-                  various colleges
+                <Typography
+                  variant="body1"
+                  className={classes.text}
+                  style={{ maxWidth: "30vw" }}
+                >
+                  {t("download_description")}
                 </Typography>
               </div>
               <div style={{ textAlign: "center" }}>
@@ -126,10 +135,10 @@ const Landing = () => {
                   alt="/"
                 />
                 <Typography variant="h5" className={classes.text}>
-                  Upload
+                  {t("upload")}
                 </Typography>
                 <Typography variant="body1" className={classes.text}>
-                  the material to help others
+                  {t("upload_description")}
                 </Typography>
               </div>
             </Grid>

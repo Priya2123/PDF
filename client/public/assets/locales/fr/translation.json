@@ -6,5 +6,11 @@
     "home": "Accueil",
     "start": "Démarrer",
     "about": "À propos de nous",
+    "search": "Chercher",
+    "search_description": "les documents dont vous avez besoin",
+    "download": "Télécharger",
+    "download_description": "le matériel et l'étude pour booster votre préparation de divers collèges",
+    "upload": "Télécharger",
+    "upload_description": "le matériel pour aider les autres",
     "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo"
   }
