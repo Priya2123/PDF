@@ -1,11 +1,12 @@
 import React from "react";
 import { Dropdown, Icon } from "semantic-ui-react";
+import i18next from "i18next";
 
-const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href =
-  "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
-document.head.appendChild(styleLink);
+// const styleLink = document.createElement("link");
+// styleLink.rel = "stylesheet";
+// styleLink.href =
+//   "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+// document.head.appendChild(styleLink);
 
 const GlobeIcon = ({ width = 25, height = 25 }) => (
   <svg
@@ -20,17 +21,39 @@ const GlobeIcon = ({ width = 25, height = 25 }) => (
   </svg>
 );
 
+const languages = [
+  {
+    code: "fr",
+    name: "Français",
+    country_code: "fr",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+  //   {
+  //     code: "ar",
+  //     name: "عربى",
+  //     country_code: "sb",
+  //     dir: "rtl",
+  //   },
+];
+
 const btt = () => (
   <div>
     <div style={{ marginLeft: "1vw", marginTop: "-3vh" }}>
       <br />
       <Dropdown text={<GlobeIcon />}>
         <Dropdown.Menu>
-          <Dropdown.Item text="English" icon="react" />
-          <Dropdown.Item text="French" icon="angular" />
-          {/* <Dropdown.Item text="HTML5" icon="html5" />
-          <Dropdown.Item text="JavaScript" icon="js" />
-          <Dropdown.Item text="NodeJS" icon="node" /> */}
+          {languages.map(({ code, name, country_code }) => (
+            <Dropdown.Item
+              onClick={() => i18next.changeLanguage(code)}
+              key={country_code}
+              text={name}
+              icon="react"
+            />
+          ))}
         </Dropdown.Menu>
       </Dropdown>
     </div>

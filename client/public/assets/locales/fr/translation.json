@@ -1,0 +1,10 @@
+{
+    "app_title": "Titre",
+    "language": "Langue",
+    "welcome_message": "La façon la plus simple de garder des notes",
+    "welcome_para": "Toutes vos notes, synchronisées sur tous vos appareils. Obtenez Simplenote maintenant pour iOS, Android, Mac, Windows, Linux ou dans votre navigateur.",
+    "home": "Accueil",
+    "start": "Démarrer",
+    "about": "À propos de nous",
+    "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo"
+  }

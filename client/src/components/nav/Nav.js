@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonAppBar() {
   const classes = useStyles();
   const [age, setAge] = React.useState("");
+  const { t } = useTranslation();
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -83,7 +85,7 @@ export default function ButtonAppBar() {
           <Link to="/" className={classes.link}>
             {" "}
             <Button color="inherit" className={classes.button}>
-              Home
+              {t("home")}
             </Button>
           </Link>
           <Link to="/gettingStarted">
@@ -92,7 +94,7 @@ export default function ButtonAppBar() {
               className={classes.button}
               style={{ marginLeft: "1%", zIndex: "101" }}
             >
-              Start
+              {t("start")}
             </Button>
           </Link>
           <Link to="/about">
@@ -102,7 +104,7 @@ export default function ButtonAppBar() {
               className={classes.button}
               style={{ marginLeft: "1%", zIndex: "101" }}
             >
-              About Us
+              {t("about")}
             </Button>
           </Link>
           <Dropdown />
