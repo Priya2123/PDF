@@ -4,8 +4,9 @@ import { useStyles } from "./FeedbackStyles";
 import Box from "@mui/material/Box";
 import Lottie from "react-lottie";
 import rating from "./rating.json";
-// import Rating from "react-rating";
 import RatingComp from "./RatingComp2";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Link } from "react-router-dom";
 
 const Feedback = (props) => {
   const classes = useStyles();
@@ -21,13 +22,7 @@ const Feedback = (props) => {
     <>
       <Grid container lg={12} md={12} justify="center">
         <Grid item lg={12} md={12}>
-          <Grid
-            container
-            lg={12}
-            md={12}
-            justify="center"
-            // style={{ textAlign: "center" }}
-          >
+          <Grid container lg={12} md={12} justify="center">
             <Grid
               item
               lg={4}
@@ -39,6 +34,19 @@ const Feedback = (props) => {
                 textAlign: "center",
               }}
             >
+              <Link to="/landing">
+                <ArrowBackIcon
+                  style={{
+                    fontWeight: "bold",
+                    position: "absolute",
+                    marginLeft: "-13vw",
+                    border: "1px solid black",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                  }}
+                />
+              </Link>
               <Typography
                 variant="h3"
                 style={{ textAlign: "center", padding: "0 10% 0 10%" }}
@@ -56,12 +64,6 @@ const Feedback = (props) => {
               <Typography variant="h4" className={classes.heading}>
                 How satisfied are you overall with the support of our system?
               </Typography>
-              {/* <Rating
-                onChange={(rate) => alert(rate)}
-                stop={10}
-                iconHover="purple"
-                className={classes.rating}
-              /> */}
               <RatingComp />
               <Grid container lg={12} md={12} justify="center">
                 <Grid item lg={12} md={12}>
@@ -75,8 +77,6 @@ const Feedback = (props) => {
                       autoComplete="on"
                       style={{ width: "100%", color: "purple" }}
                       variant="outlined"
-                      //   value={description}
-                      //   onChange={(e) => setDescription(e.target.value)}
                     />
                   </Box>
                 </Grid>
