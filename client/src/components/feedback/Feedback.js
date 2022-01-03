@@ -1,14 +1,14 @@
 import React from "react";
-import { Grid, Typography, TextField, Box, Button } from "@mui/material";
+import { Grid, Typography, TextField, Button } from "@mui/material";
 import { useStyles } from "./FeedbackStyles";
-import Rating from "@mui/material/Rating";
+import Box from "@mui/material/Box";
 import Lottie from "react-lottie";
 import rating from "./rating.json";
 // import Rating from "react-rating";
+import RatingComp from "./RatingComp2";
 
 const Feedback = (props) => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -62,26 +62,7 @@ const Feedback = (props) => {
                 iconHover="purple"
                 className={classes.rating}
               /> */}
-              <Grid container>
-                <Grid item lg={10} md={10} style={{ padding: "2% 0 3% 0" }}>
-                  <Box
-                    sx={{
-                      "& > legend": { mt: 2 },
-                    }}
-                  >
-                    <Rating
-                      name="simple-controlled"
-                      value={value}
-                      //   style={{ height: "2vh", width: "20%" }}
-                      size="large"
-                      onChange={(event, newValue) => {
-                        event.preventDefault();
-                        setValue(newValue);
-                      }}
-                    />
-                  </Box>
-                </Grid>
-              </Grid>
+              <RatingComp />
               <Grid container lg={12} md={12} justify="center">
                 <Grid item lg={12} md={12}>
                   <Box className={classes.text}>
