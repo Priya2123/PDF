@@ -11,6 +11,7 @@ import {
   Signup,
   Signuplogin,
   Feedback,
+  Notfound,
 } from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -36,6 +37,7 @@ const App = () => {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/signuplogin" component={Signuplogin} />
           <Route exact path="/feedback" component={Feedback} />
+          <Route component={Notfound} />
         </Switch>
       </Router>
     </>

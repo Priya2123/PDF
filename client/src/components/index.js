@@ -10,6 +10,7 @@ import Login from "./login/LoginForm";
 import Signup from "./login/Signup";
 import Signuplogin from "./signup/Signup";
 import Feedback from "./feedback/Feedback";
+import Notfound from "./notfound/Notfound";
 
 export {
   Nav,
@@ -24,4 +25,5 @@ export {
   Signup,
   Signuplogin,
   Feedback,
+  Notfound,
 };
