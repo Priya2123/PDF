@@ -7,6 +7,7 @@ import search from "../../assets/search.png";
 import download from "../../assets/download.png";
 import upload from "../../assets/upload.png";
 import LandingCard from "./LandingCard";
+import Footer from "../footer/Footer";
 
 const Landing = () => {
   const classes = useStyles();
@@ -154,6 +155,7 @@ const Landing = () => {
           />
         ))}
       </Grid>
+      <Footer />
       <div></div>
     </div>
   );
