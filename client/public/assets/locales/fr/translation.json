@@ -1,0 +1,21 @@
+{
+    "app_title": "Titre",
+    "language": "Langue",
+    "welcome_message": "La façon la plus simple de garder des notes",
+    "welcome_para": "Toutes vos notes, synchronisées sur tous vos appareils. Obtenez Simplenote maintenant pour iOS, Android, Mac, Windows, Linux ou dans votre navigateur.",
+    "home": "Accueil",
+    "start": "Démarrer",
+    "about": "À propos de nous",
+    "search": "Chercher",
+    "search_description": "les documents dont vous avez besoin",
+    "download": "Télécharger",
+    "download_description": "le matériel et l'étude pour booster votre préparation de divers collèges",
+    "upload": "Télécharger",
+    "upload_description": "le matériel pour aider les autres",
+    "my_profile":"Mon profil",
+    "footer_connect":"RELIER",
+    "footer_feedback":"Rétroaction",
+    "footer_support":"Soutien",
+    "footer_web":"AUTOUR DU WEB",
+    "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo"
+  }

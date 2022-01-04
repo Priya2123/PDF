@@ -1,0 +1,21 @@
+{
+    "app_title": "Title",
+    "language": "Language",
+    "welcome_message": "The simplest way to keep notes",
+    "welcome_para": "All your notes, synced on all your devices. Get Simplenote now for iOS, Android, Mac, Windows, Linux, or in your browser.",
+    "home": "Home",
+    "start": "Start",
+    "about": "About Us",
+    "search": "Search",
+    "search_description": "the documents you need",
+    "download": "Download",
+    "download_description": "the material and study to boost your preparation from various colleges",
+    "upload":"Upload",
+    "upload_description": "the material to help others",
+    "my_profile":"My Profile",
+    "footer_connect":"CONNECT",
+    "footer_feedback":"Feedback",
+    "footer_support":"Support",
+    "footer_web":"AROUND THE WEB",
+    "days_since_release": "it's been {{number_of_days}} days since this video was released"
+  }

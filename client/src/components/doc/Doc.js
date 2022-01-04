@@ -15,6 +15,33 @@ import { useStyles } from "./DocStyles";
 
 const Doc = () => {
   const classes = useStyles();
+  const docList = [
+    {
+      src: pdf1,
+      title: "Resume",
+      description: "blah blah blah blah blah",
+    },
+    {
+      src: pdf1,
+      title: "Resume 2",
+      description: "blah blah blah blah blah",
+    },
+    {
+      src: pdf1,
+      title: "Resume 3",
+      description: "blah blah blah blah blah",
+    },
+    {
+      src: pdf1,
+      title: "Resume 4",
+      description: "blah blah blah blah blah",
+    },
+    {
+      src: pdf1,
+      title: "Resume 5",
+      description: "blah blah blah blah blah",
+    },
+  ];
   return (
     <div style={{ backgroundColor: "#271e2a", minHeight: "100vh" }}>
       <NavLanding />

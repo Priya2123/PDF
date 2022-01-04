@@ -5,6 +5,10 @@ import Nav from "../nav/Nav";
 import { Grid, Typography } from "@material-ui/core";
 import { useStyles } from "./AboutStyles";
 import { motion } from "framer-motion";
+import priya from "../../assets/priya3.jfif";
+import mahi from "../../assets/mahi.jfif";
+import rishi from "../../assets/rishi.jfif";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const classes = useStyles();
@@ -16,6 +20,7 @@ const About = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  const { t } = useTranslation();
   return (
     <div style={{ backgroundColor: "#000" }}>
       <Nav />
@@ -33,7 +38,7 @@ const About = () => {
                 className={classes.text}
                 style={{ marginBottom: "2%", fontWeight: "bold" }}
               >
-                ABOUT US
+                {t("about")}
               </Typography>
               <Typography variant="body1" className={classes.text}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -89,13 +94,17 @@ const About = () => {
                 }}
               >
                 <img
-                  src="https://i.pinimg.com/originals/92/82/eb/9282eb77c058ac603483139c2f6f2542.jpg"
+                  // src="https://i.pinimg.com/originals/92/82/eb/9282eb77c058ac603483139c2f6f2542.jpg"
+                  src={priya}
                   alt=""
                   className={classes.image}
                 />
               </motion.li>
             </Grid>
             <Grid item lg={6} md={6} xs={11} sm={11}>
+              <Typography variant="h4" className={classes.aboutppl}>
+                Priya Aggarwal
+              </Typography>
               <Typography variant="h6" className={classes.aboutppl}>
                 me no bhand blah blah blah blah blah blah blah blah blah blah
                 blah blah blah blah blah blah blah blah blah blah blah blah blah
@@ -112,6 +121,9 @@ const About = () => {
               sm={11}
               className={classes.blocksmall}
             >
+              <Typography variant="h4" className={classes.aboutppl}>
+                Mayank Nagpal
+              </Typography>
               <Typography variant="h6" className={classes.aboutppl}>
                 bhak bhosdike. babaji blah blah blah blah blah blah blah blah
                 blah blah blah blah blah blah blah blah blah blah blah blah blah
@@ -139,13 +151,17 @@ const About = () => {
                 }}
               >
                 <img
-                  src="https://th.bing.com/th/id/OIP.-gcGCLU79TJW4N_OioDZMgHaHD?w=220&h=210&c=7&o=5&dpr=1.5&pid=1.7"
+                  // src="https://th.bing.com/th/id/OIP.-gcGCLU79TJW4N_OioDZMgHaHD?w=220&h=210&c=7&o=5&dpr=1.5&pid=1.7"
+                  src={mahi}
                   alt=""
                   className={classes.image}
                 />
               </motion.li>
             </Grid>
             <Grid item lg={6} md={6} xs={11} sm={11} className={classes.block}>
+              <Typography variant="h4" className={classes.aboutppl}>
+                Mayank Nagpal
+              </Typography>
               <Typography variant="h6" className={classes.aboutppl}>
                 bhak bhosdike. babaji blah blah blah blah blah blah blah blah
                 blah blah blah blah blah blah blah blah blah blah blah blah blah
@@ -179,13 +195,17 @@ const About = () => {
                 }}
               >
                 <img
-                  src="https://pbs.twimg.com/media/DbbpmQBVwAABhLX.jpg"
+                  // src="https://pbs.twimg.com/media/DbbpmQBVwAABhLX.jpg"
+                  src={rishi}
                   alt=""
                   className={classes.image}
                 />
               </motion.li>
             </Grid>
             <Grid item lg={6} md={6} xs={11} sm={11}>
+              <Typography variant="h4" className={classes.aboutppl}>
+                Rishi Kumar
+              </Typography>
               <Typography variant="h6" className={classes.aboutppl}>
                 daaru laaye aaj blah blah blah blah blah blah blah blah blah
                 blah blah blah blah blah blah blah blah blah blah blah blah blah
