@@ -17,5 +17,16 @@
     "footer_feedback":"Rétroaction",
     "footer_support":"Soutien",
     "footer_web":"AUTOUR DU WEB",
+    "upload_page": "Télécharger le PDF",
+    "upload_page_first_name": "Prénom",
+    "upload_page_last_name": "Nom de famille",
+    "upload_page_email": "E-mail",
+    "upload_page_mobile_number": "Numéro de portable",
+    "upload_page_college":"Université",
+    "upload_page_year":"An",
+    "upload_page_branch_of_pdf": "Branche de PDF",
+    "upload_page_subject_of_pdf": "Objet du PDF",
+    "upload_page_confirmation": "Avez-vous lu toutes les instructions?",
+    "upload_page_submit": "Soumettre",
     "days_since_release": "ça fait {{number_of_days}} jours depuis la sortie de cette vidéo"
   }

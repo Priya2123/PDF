@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Tooltip from "@mui/material/Tooltip";
 import { useTranslation } from "react-i18next";
+import Dropdown from "../nav/Dropdown";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -103,6 +104,7 @@ export default function ButtonAppBar() {
               {t("my_profile")}
             </Button>
           </Link>
+          <Dropdown />
           <div>
             <Tooltip title="Logout" placement="bottom">
               <ExitToAppIcon style={{ cursor: "pointer", color: "white" }} />

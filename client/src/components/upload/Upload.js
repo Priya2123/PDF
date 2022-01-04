@@ -7,9 +7,11 @@ import { useForm, Controller } from "react-hook-form";
 import Input from "@material-ui/core/Input";
 import "./style.css";
 import Fade from "react-reveal/Fade";
+import { useTranslation } from "react-i18next";
 
 const Upload = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
   const {
     register,
     errors,
@@ -42,7 +44,7 @@ const Upload = () => {
                 style={{ textAlign: "center" }}
               >
                 <Typography className={classes.heading} variant="h4">
-                  Upload PDF
+                  {t("upload_page")}
                 </Typography>
               </Grid>
             </Grid>
@@ -57,7 +59,7 @@ const Upload = () => {
                 className={classes.form}
               >
                 <form onSubmit={handleSubmit(onSubmit)}>
-                  <label>First name</label>
+                  <label>{t("upload_page_first_name")}</label>
                   <input
                     type="text"
                     {...register("First name", {
@@ -65,7 +67,7 @@ const Upload = () => {
                       maxLength: 80,
                     })}
                   />
-                  <label>Last name</label>
+                  <label>{t("upload_page_last_name")}</label>
                   <input
                     type="text"
                     {...register("Last name", {
@@ -73,7 +75,7 @@ const Upload = () => {
                       maxLength: 100,
                     })}
                   />
-                  <label>Email</label>
+                  <label>{t("upload_page_email")}</label>
                   <input
                     type="text"
                     {...register("Email", {
@@ -82,7 +84,7 @@ const Upload = () => {
                         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                     })}
                   />
-                  <label>Mobile number</label>
+                  <label>{t("upload_page_mobile_number")}</label>
                   <input
                     type="tel"
                     {...register("Mobile number", {
@@ -91,12 +93,12 @@ const Upload = () => {
                       minLength: 8,
                     })}
                   />
-                  <label>College</label>
+                  <label>{t("upload_page_college")}</label>
                   <input
                     type="text"
                     {...register("College", { required: true, maxLength: 500 })}
                   />
-                  <label>Year</label>
+                  <label>{t("upload_page_year")}</label>
                   <input
                     type="tel"
                     {...register("Year", {
@@ -105,17 +107,17 @@ const Upload = () => {
                       minLength: 1,
                     })}
                   />
-                  <label>Branch of PDF</label>
+                  <label>{t("upload_page_branch_of_pdf")}</label>
                   <input
                     type="text"
                     {...register("branch", { required: true, maxLength: 500 })}
                   />
-                  <label>Subject of PDF</label>
+                  <label>{t("upload_page_subject_of_pdf")}</label>
                   <input
                     type="text"
                     {...register("subject", { required: true, maxLength: 500 })}
                   />
-                  <label>Upload PDF</label>
+                  <label>{t("upload_page")}</label>
                   <input type="file" name="pdf" style={{ color: "white" }} />
                   {/* <label>Title</label>
                 <select
@@ -129,7 +131,7 @@ const Upload = () => {
                   <option value="Miss">Miss</option>
                   <option value="Dr">Dr</option>
                 </select> */}
-                  <label>Have you read all the instructions?</label>
+                  <label>{t("upload_page_confirmation")}</label>
                   {/* <input
                   key={value}
                   type="checkbox"
@@ -169,7 +171,7 @@ const Upload = () => {
                     value="No"
                     {...register("read", { required: true })}
                   />
-                  <button type="reset">Submit</button>
+                  <button type="reset">{t("upload_page_submit")}</button>
                   {/* <input type="reset" type="submit" /> */}
                 </form>
               </Grid>
