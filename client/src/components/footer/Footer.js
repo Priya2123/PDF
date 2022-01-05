@@ -40,9 +40,11 @@ const Footer = () => {
           style={{ backgroundColor: "white", width: "40%" }}
           variant="middle"
         /> */}
-        <Typography variant="body1" className={classes.text}>
-          Support
-        </Typography>
+        <Link to="/support">
+          <Typography variant="body1" className={classes.text}>
+            Support
+          </Typography>
+        </Link>
       </Grid>
       <Grid item lg={3} md={3}>
         <Typography variant="h6" className={classes.text}>

@@ -11,6 +11,7 @@ import Signup from "./login/Signup";
 import Signuplogin from "./signup/Signup";
 import Feedback from "./feedback/Feedback";
 import Notfound from "./notfound/Notfound";
+import Support from "./support/Support";
 
 export {
   Nav,
@@ -26,4 +27,5 @@ export {
   Signuplogin,
   Feedback,
   Notfound,
+  Support,
 };
