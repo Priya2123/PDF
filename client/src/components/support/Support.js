@@ -48,31 +48,96 @@ const Support = (props) => {
               </Link>
               <Typography
                 variant="h3"
-                style={{ textAlign: "center", padding: "0 10% 0 10%" }}
+                style={{ textAlign: "center", padding: "0 10% 17% 10%" }}
                 className={classes.heading}
               >
-                Feel free to drop us your feedback.
+                Need some help?
               </Typography>
               <Lottie
                 className={classes.lottie}
-                style={{ height: "60vh", width: "100%" }}
+                style={{ height: "55vh", width: "100%" }}
                 options={defaultOptions}
               />
             </Grid>
             <Grid item lg={7} md={7} style={{ padding: "3% 0 3% 3%" }}>
               <Typography variant="h4" className={classes.heading}>
-                How satisfied are you overall with the support of our system?
+                Hi, How can we help?
               </Typography>
-              {/* <RatingComp /> */}
               <Grid container lg={12} md={12} justify="center">
                 <Grid item lg={12} md={12}>
                   <Box className={classes.text}>
                     <TextField
                       multiline={true}
+                      rows={1}
+                      name="Name"
+                      label="Name"
+                      placeholder="Name"
+                      autoComplete="on"
+                      style={{ width: "100%", color: "purple" }}
+                      variant="outlined"
+                    />
+                  </Box>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                lg={12}
+                md={12}
+                justify="center"
+                style={{ marginTop: "1%" }}
+              >
+                <Grid item lg={12} md={12}>
+                  <Box className={classes.text}>
+                    <TextField
+                      multiline={true}
+                      rows={1}
+                      name="Email"
+                      label="Email"
+                      placeholder="Email"
+                      autoComplete="on"
+                      style={{ width: "100%", color: "purple" }}
+                      variant="outlined"
+                    />
+                  </Box>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                lg={12}
+                md={12}
+                justify="center"
+                style={{ marginTop: "1%" }}
+              >
+                <Grid item lg={12} md={12}>
+                  <Box className={classes.text}>
+                    <TextField
+                      multiline={true}
+                      rows={1}
+                      name="Mobile Number"
+                      label="Mobile Number"
+                      placeholder="Mobile Number"
+                      autoComplete="on"
+                      style={{ width: "100%", color: "purple" }}
+                      variant="outlined"
+                    />
+                  </Box>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                lg={12}
+                md={12}
+                justify="center"
+                style={{ marginTop: "1%" }}
+              >
+                <Grid item lg={12} md={12}>
+                  <Box className={classes.text}>
+                    <TextField
+                      multiline={true}
                       rows={7}
-                      name="Feedback"
-                      label="Feedback"
-                      placeholder="Please share your feedback."
+                      name="Complaint"
+                      label="Complaint"
+                      placeholder="Please send your detailed complaint."
                       autoComplete="on"
                       style={{ width: "100%", color: "purple" }}
                       variant="outlined"
@@ -98,7 +163,7 @@ const Support = (props) => {
                       justifyContent: "center",
                     }}
                   >
-                    Send Feedback
+                    Send Complaint
                   </Button>
                 </Grid>
               </Grid>
