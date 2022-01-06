@@ -12,6 +12,8 @@ import DownloadIcon from "@mui/icons-material/Download";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
 import faq from "../../assets/faq.png";
 import { useStyles } from "./FaqStyles";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Link } from "react-router-dom";
 
 const Faq = () => {
   const classes = useStyles();
@@ -28,6 +30,23 @@ const Faq = () => {
         paddingBottom: "25vh",
       }}
     >
+      <Link to="/landing">
+        <ArrowBackIcon
+          style={{
+            cursor: "pointer",
+            fontWeight: "bold",
+            position: "absolute",
+            // marginLeft: "-13vw",
+            top: "2%",
+            left: "3%",
+            border: "1px solid black",
+            justifyContent: "center",
+            alignItems: "center",
+            "&:hover": { cursor: "pointer" },
+          }}
+        />
+      </Link>
+
       <Grid item lg={12} md={12} justify="center">
         <img src={faq} alt="" className={classes.png} />
         <Typography
