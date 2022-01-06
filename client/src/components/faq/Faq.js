@@ -78,6 +78,24 @@ const Faq = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
+            <Accordion style={{ backgroundColor: "purple" }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{ color: "lavender" }} />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography style={{ color: "lavender" }}>
+                  Accordion 1
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography style={{ color: "lavender" }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                  eget.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
           </Grid>
         </Grid>
         <Grid
@@ -140,6 +158,24 @@ const Faq = () => {
             <Typography variant="h5" style={{ marginBottom: "0.5%" }}>
               <FileUploadIcon /> Upload
             </Typography>
+            <Accordion style={{ backgroundColor: "purple" }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon style={{ color: "lavender" }} />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography style={{ color: "lavender" }}>
+                  Accordion 1
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography style={{ color: "lavender" }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                  eget.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
             <Accordion style={{ backgroundColor: "purple" }}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon style={{ color: "lavender" }} />}
