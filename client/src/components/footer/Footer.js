@@ -32,6 +32,7 @@ const Footer = () => {
             variant="body1"
             className={classes.text}
             style={{ marginTop: "4%" }}
+            // underline="none"
           >
             Feedback
           </Typography>
@@ -43,6 +44,11 @@ const Footer = () => {
         <Link to="/support">
           <Typography variant="body1" className={classes.text}>
             Support
+          </Typography>
+        </Link>
+        <Link to="/faq">
+          <Typography variant="body1" className={classes.text}>
+            Faq
           </Typography>
         </Link>
       </Grid>

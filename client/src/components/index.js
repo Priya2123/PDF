@@ -12,6 +12,7 @@ import Signuplogin from "./signup/Signup";
 import Feedback from "./feedback/Feedback";
 import Notfound from "./notfound/Notfound";
 import Support from "./support/Support";
+import Faq from "./faq/Faq";
 
 export {
   Nav,
@@ -28,4 +29,5 @@ export {
   Feedback,
   Notfound,
   Support,
+  Faq,
 };

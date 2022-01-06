@@ -13,6 +13,7 @@ import {
   Feedback,
   Notfound,
   Support,
+  Faq,
 } from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -39,6 +40,7 @@ const App = () => {
           <Route exact path="/signuplogin" component={Signuplogin} />
           <Route exact path="/feedback" component={Feedback} />
           <Route exact path="/support" component={Support} />
+          <Route exact path="/faq" component={Faq} />
           <Route component={Notfound} />
         </Switch>
       </Router>
