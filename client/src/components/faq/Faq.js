@@ -10,8 +10,11 @@ import GroupWorkIcon from "@mui/icons-material/GroupWork";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DownloadIcon from "@mui/icons-material/Download";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
+import faq from "../../assets/faq.png";
+import { useStyles } from "./FaqStyles";
 
 const Faq = () => {
+  const classes = useStyles();
   return (
     <Grid
       container
@@ -22,9 +25,11 @@ const Faq = () => {
         backgroundColor: "lavender",
         minHeight: "100vh",
         color: "purple",
+        paddingBottom: "25vh",
       }}
     >
       <Grid item lg={12} md={12} justify="center">
+        <img src={faq} alt="" className={classes.png} />
         <Typography
           variant="h4"
           style={{ padding: "4% 0 0 0", textAlign: "center" }}
