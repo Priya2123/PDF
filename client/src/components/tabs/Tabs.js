@@ -2,6 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Grid, Tabs, Tab, Typography, Box } from "@mui/material";
 import All from "./All";
+import Unanswered from "./Unanswered";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -69,7 +70,7 @@ export default function BasicTabs() {
             <All />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            Unanswered Questions
+            <Unanswered />
           </TabPanel>
           <TabPanel value={value} index={2}>
             Answered Questions
