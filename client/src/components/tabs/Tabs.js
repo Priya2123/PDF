@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { Grid, Tabs, Tab, Typography, Box } from "@mui/material";
 import All from "./All";
 import Unanswered from "./Unanswered";
-
+import Answered from "./Answered";
+import Ask from "./Ask";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -73,10 +74,10 @@ export default function BasicTabs() {
             <Unanswered />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            Answered Questions
+            <Answered />
           </TabPanel>
           <TabPanel value={value} index={3}>
-            Ask
+            <Ask />
           </TabPanel>
         </Box>
       </Grid>
