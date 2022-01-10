@@ -1,6 +1,7 @@
 import React from "react";
-import { Grid, Typography, Paper } from "@mui/material";
+import { Grid, Typography, Paper, Avatar } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import priya from "../../assets/priya3.jfif";
 
 const All = () => {
   return (
@@ -25,8 +26,33 @@ const All = () => {
         </div>
         <Grid container lg={12} md={12} justify="center">
           <Grid item lg={10} md={10} justify="center">
-            <Paper elevation={4}>
-              <Typography>Hy</Typography>
+            <Paper elevation={4} style={{ padding: "1%" }}>
+              <Grid container lg={12} md={12}>
+                <Grid item>
+                  {/* <Avatar>P</Avatar> */}
+                  <Avatar alt="" src={priya} />
+                </Grid>
+                <Grid item lg={10} md={10}>
+                  <Typography style={{ paddingLeft: "3%" }} variant="body2">
+                    Priya Aggarwal
+                    <br />
+                    <Typography variant="caption" style={{ color: "gray" }}>
+                      @Thapar Institute
+                    </Typography>
+                  </Typography>
+                </Grid>
+                <Grid item lg={1} md={1}>
+                  <Typography variant="caption">2 days ago</Typography>
+                </Grid>
+              </Grid>
+              <Grid container style={{ padding: "1% 0 0 1%" }}>
+                {/* <Grid item></Grid> */}
+                <Grid item>
+                  <Typography variant="h6">
+                    Anda pehle aaya ya murgi?
+                  </Typography>
+                </Grid>
+              </Grid>
             </Paper>
           </Grid>
         </Grid>
