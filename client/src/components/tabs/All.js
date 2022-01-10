@@ -11,6 +11,8 @@ const All = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
+            maxWidth: "90vw",
+            align: "center",
           }}
         >
           <Typography variant="caption">
@@ -21,6 +23,13 @@ const All = () => {
             <ExpandMoreIcon style={{ paddingTop: "10px" }} fontSize="small" />
           </Typography>
         </div>
+        <Grid container lg={12} md={12} justify="center">
+          <Grid item lg={10} md={10} justify="center">
+            <Paper elevation={4}>
+              <Typography>Hy</Typography>
+            </Paper>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
