@@ -51,6 +51,11 @@ const Footer = () => {
             Faq
           </Typography>
         </Link>
+        <Link to="/questions">
+          <Typography variant="body1" className={classes.text}>
+            Questions ans answers
+          </Typography>
+        </Link>
       </Grid>
       <Grid item lg={3} md={3}>
         <Typography variant="h6" className={classes.text}>

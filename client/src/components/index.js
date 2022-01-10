@@ -13,6 +13,7 @@ import Feedback from "./feedback/Feedback";
 import Notfound from "./notfound/Notfound";
 import Support from "./support/Support";
 import Faq from "./faq/Faq";
+import Tabs from "./tabs/Tabs";
 
 export {
   Nav,
@@ -30,4 +31,5 @@ export {
   Notfound,
   Support,
   Faq,
+  Tabs,
 };
