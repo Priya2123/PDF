@@ -44,7 +44,11 @@ export default function BasicTabs() {
   };
 
   return (
-    <Grid container style={{ backgroundColor: "lavender" }} justify="center">
+    <Grid
+      container
+      style={{ backgroundColor: "lavender", minHeight: "100vh" }}
+      justify="center"
+    >
       <Grid item lg={12} md={12} justify="center">
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>

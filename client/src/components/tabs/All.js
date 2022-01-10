@@ -2,6 +2,9 @@ import React from "react";
 import { Grid, Typography, Paper, Avatar } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import priya from "../../assets/priya3.jfif";
+import mahi from "../../assets/mahi.jfif";
+import rishi from "../../assets/rishi.jfif";
+import ForumIcon from "@mui/icons-material/Forum";
 
 const All = () => {
   return (
@@ -26,6 +29,49 @@ const All = () => {
         </div>
         <Grid container lg={12} md={12} justify="center">
           <Grid item lg={10} md={10} justify="center">
+            <Paper elevation={4} style={{ padding: "1%", marginBottom: "3%" }}>
+              <Grid container lg={12} md={12}>
+                <Grid item>
+                  {/* <Avatar>P</Avatar> */}
+                  <Avatar alt="" src={priya} />
+                </Grid>
+                <Grid item lg={10} md={10}>
+                  <Typography style={{ paddingLeft: "3%" }} variant="body2">
+                    Priya Aggarwal
+                    <br />
+                    <Typography variant="caption" style={{ color: "gray" }}>
+                      @Thapar Institute
+                    </Typography>
+                  </Typography>
+                </Grid>
+                <Grid item lg={1} md={1}>
+                  <Typography variant="caption">2 days ago</Typography>
+                </Grid>
+              </Grid>
+              <Grid container style={{ padding: "1% 0 0 1%" }}>
+                {/* <Grid item></Grid> */}
+                <Grid item>
+                  <Typography variant="h6">
+                    Anda pehle aaya ya murgi?
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid container style={{ padding: "0.2% 0 0 1%" }}>
+                {/* <Grid item></Grid> */}
+                <Grid item>
+                  <Typography variant="body1">murgiiiiiiii it is</Typography>
+                </Grid>
+              </Grid>
+              <Grid container style={{ padding: "0.3% 0 0 1%" }}>
+                <Grid item>
+                  <ForumIcon
+                    fontSize="small"
+                    style={{ paddingTop: "20%", cursor: "pointer" }}
+                  />
+                  <Typography variant="caption">7</Typography>
+                </Grid>
+              </Grid>
+            </Paper>
             <Paper elevation={4} style={{ padding: "1%" }}>
               <Grid container lg={12} md={12}>
                 <Grid item>
@@ -51,6 +97,21 @@ const All = () => {
                   <Typography variant="h6">
                     Anda pehle aaya ya murgi?
                   </Typography>
+                </Grid>
+              </Grid>
+              <Grid container style={{ padding: "0.2% 0 0 1%" }}>
+                {/* <Grid item></Grid> */}
+                <Grid item>
+                  <Typography variant="body1">murgiiiiiiii it is</Typography>
+                </Grid>
+              </Grid>
+              <Grid container style={{ padding: "0.3% 0 0 1%" }}>
+                <Grid item>
+                  <ForumIcon
+                    fontSize="small"
+                    style={{ paddingTop: "20%", cursor: "pointer" }}
+                  />
+                  <Typography variant="caption">7</Typography>
                 </Grid>
               </Grid>
             </Paper>
