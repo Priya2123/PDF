@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Grid, Tabs, Tab, Typography, Box } from "@mui/material";
+import All from "./All";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,7 +62,7 @@ export default function BasicTabs() {
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            All
+            <All />
           </TabPanel>
           <TabPanel value={value} index={1}>
             Unanswered Questions
