@@ -116,7 +116,11 @@ const All = () => {
                 </Grid>
                 <Grid item>
                   <CheckCircleIcon
-                    style={{ marginLeft: "2vw", color: "green" }}
+                    style={{
+                      left: "9vw",
+                      color: "green",
+                      position: "absolute",
+                    }}
                   />
                 </Grid>
               </Grid>
@@ -164,7 +168,11 @@ const All = () => {
                 </Grid>
                 <Grid item>
                   <CheckCircleIcon
-                    style={{ marginLeft: "2vw", color: "green" }}
+                    style={{
+                      left: "9vw",
+                      color: "green",
+                      position: "absolute",
+                    }}
                   />
                 </Grid>
               </Grid>
@@ -212,7 +220,11 @@ const All = () => {
                 </Grid>
                 <Grid item>
                   <CheckCircleIcon
-                    style={{ marginLeft: "2vw", color: "green" }}
+                    style={{
+                      left: "9vw",
+                      color: "green",
+                      position: "absolute",
+                    }}
                   />
                 </Grid>
               </Grid>
