@@ -6,8 +6,10 @@ import mahi from "../../assets/mahi.jfif";
 import rishi from "../../assets/rishi.jfif";
 import ForumIcon from "@mui/icons-material/Forum";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import useCollapse from "react-collapsed";
 
 const Answered = () => {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   return (
     <Grid container lg={12} md={12} justify="center">
       <Grid item lg={12} md={12} justify="center">
@@ -65,15 +67,48 @@ const Answered = () => {
               </Grid>
               <Grid container style={{ padding: "0.3% 0 0 1%" }}>
                 <Grid item>
-                  <ForumIcon
-                    fontSize="small"
-                    style={{ paddingTop: "20%", cursor: "pointer" }}
-                  />
-                  <Typography variant="caption">7</Typography>
+                  <div {...getToggleProps()}>
+                    {isExpanded ? (
+                      <>
+                        <Typography
+                          variant="body2"
+                          style={{ cursor: "pointer" }}
+                        >
+                          Answers:{" "}
+                        </Typography>
+                      </>
+                    ) : (
+                      <>
+                        {" "}
+                        <ForumIcon
+                          fontSize="small"
+                          style={{ paddingTop: "20%", cursor: "pointer" }}
+                        />
+                        <Typography
+                          style={{ cursor: "pointer" }}
+                          variant="caption"
+                        >
+                          7
+                        </Typography>
+                      </>
+                    )}
+                  </div>
+                  <div {...getCollapseProps()}>
+                    <Typography variant="body1">
+                      1. answer1 blah blah blah blah blah
+                    </Typography>
+                    <Typography variant="body1">
+                      2. answer2 blah blah blah blah blah
+                    </Typography>
+                  </div>
                 </Grid>
                 <Grid item>
                   <CheckCircleIcon
-                    style={{ marginLeft: "2vw", color: "green" }}
+                    style={{
+                      left: "9vw",
+                      color: "green",
+                      position: "absolute",
+                    }}
                   />
                 </Grid>
               </Grid>
@@ -113,15 +148,48 @@ const Answered = () => {
               </Grid>
               <Grid container style={{ padding: "0.3% 0 0 1%" }}>
                 <Grid item>
-                  <ForumIcon
-                    fontSize="small"
-                    style={{ paddingTop: "20%", cursor: "pointer" }}
-                  />
-                  <Typography variant="caption">7</Typography>
+                  <div {...getToggleProps()}>
+                    {isExpanded ? (
+                      <>
+                        <Typography
+                          variant="body2"
+                          style={{ cursor: "pointer" }}
+                        >
+                          Answers:{" "}
+                        </Typography>
+                      </>
+                    ) : (
+                      <>
+                        {" "}
+                        <ForumIcon
+                          fontSize="small"
+                          style={{ paddingTop: "20%", cursor: "pointer" }}
+                        />
+                        <Typography
+                          style={{ cursor: "pointer" }}
+                          variant="caption"
+                        >
+                          7
+                        </Typography>
+                      </>
+                    )}
+                  </div>
+                  <div {...getCollapseProps()}>
+                    <Typography variant="body1">
+                      1. answer1 blah blah blah blah blah
+                    </Typography>
+                    <Typography variant="body1">
+                      2. answer2 blah blah blah blah blah
+                    </Typography>
+                  </div>
                 </Grid>
                 <Grid item>
                   <CheckCircleIcon
-                    style={{ marginLeft: "2vw", color: "green" }}
+                    style={{
+                      left: "9vw",
+                      color: "green",
+                      position: "absolute",
+                    }}
                   />
                 </Grid>
               </Grid>
