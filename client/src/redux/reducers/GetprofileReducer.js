@@ -1,9 +1,10 @@
 import { GET_PROFILE, GET_ERROR } from "../types";
 
 const initialState = {
-  name: "Priya",
+  name: null,
   branch: null,
   college: null,
+  err: null,
 };
 
 export default (state = initialState, action) => {

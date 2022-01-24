@@ -13,16 +13,18 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import pic from "../../assets/1.jpg";
 import { Link } from "react-router-dom";
 import { profiledata } from "../../redux/actions/GetprofileActions";
+import { useDispatch } from "react-redux";
 
 const Profile = () => {
   const classes = useStyles();
-  console.log("Profile", profiledata.data);
-
+  const dispatch = useDispatch();
   let [prof, setProf] = useState([]);
 
   useEffect(() => {
     getProf();
-  }, []);
+    dispatch(profiledata());
+  }, [dispatch]);
+  console.log("Profile", profiledata.data);
 
   let getProf = async () => {
     let response = await fetch("http://127.0.0.1:8000/profile/");
