@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { useStyles } from "./ProfileStyles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-solid-svg-icons";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -12,27 +10,33 @@ import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import pic from "../../assets/1.jpg";
 import { Link } from "react-router-dom";
-import { profiledata } from "../../redux/actions/GetprofileActions";
 import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
+import { useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+import allactions from "../../redux/actions";
 
-const Profile = () => {
+const Profile = (props) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  let [prof, setProf] = useState([]);
+  // let [prof, setProf] = useState([]);
 
   useEffect(() => {
-    getProf();
-    dispatch(profiledata());
-  }, [dispatch]);
-  console.log("Profile", profiledata.data);
+    // getProf();
+    dispatch(allactions.profiledata()); //action
+  }, []);
 
-  let getProf = async () => {
-    let response = await fetch("http://127.0.0.1:8000/profile/");
-    let data = await response.json();
-    setProf(data);
-  };
+  //reducer
+  const data = useSelector((state) => state.getprofile);
+  console.log("data in file", data);
 
-  if (prof != "None") {
+  // let getProf = async () => {
+  //   let response = await fetch("http://127.0.0.1:8000/profile/");
+  //   let data = await response.json();
+  //   setProf(data);
+  // };
+
+  if (data != "None") {
     return (
       <div>
         <Grid
@@ -59,7 +63,7 @@ const Profile = () => {
             <Grid container style={{ marginTop: "13vh" }}>
               <Grid item>
                 <Typography style={{ fontWeight: "bold" }} variant="h4">
-                  {prof.name}
+                  {data.name}
                 </Typography>
               </Grid>
             </Grid>
@@ -72,7 +76,7 @@ const Profile = () => {
                 </Grid>
                 <Grid container>
                   <Grid item>
-                    <Typography variant="h6">{prof.branch}</Typography>
+                    <Typography variant="h6">{data.branch}</Typography>
                   </Grid>
                 </Grid>
               </Grid>
@@ -84,7 +88,7 @@ const Profile = () => {
                 </Grid>
                 <Grid container>
                   <Grid item>
-                    <Typography variant="h6">{prof.college}</Typography>
+                    <Typography variant="h6">{data.college}</Typography>
                   </Grid>
                 </Grid>
               </Grid>
@@ -167,5 +171,13 @@ const Profile = () => {
     window.location.replace("/login/");
   }
 };
+// function mapStateToProps(state) {
+//   return { profile: state.profile };
+// }
+
+// function matchDispatchToProps(dispatch) {
+//   return bindActionCreators({ profiledata: profiledata }, dispatch);
+// }
 
 export default Profile;
+// export default connect(mapStateToProps, matchDispatchToProps)(Profile);
