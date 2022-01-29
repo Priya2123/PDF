@@ -66,7 +66,7 @@ const Feedback = (props) => {
               </Typography>
               <RatingComp />
               <Grid container lg={12} md={12} justify="center">
-                <Grid item lg={12} md={12}>
+                <Grid item lg={12} md={12} sm={11} xs={11}>
                   <Box className={classes.text}>
                     <TextField
                       multiline={true}
@@ -87,8 +87,9 @@ const Feedback = (props) => {
                 md={12}
                 justify="center"
                 style={{ paddingTop: "6%" }}
+                className={classes.btnsend}
               >
-                <Grid item lg={4} md={4}>
+                <Grid item lg={4} md={4} sm={11} xs={11}>
                   <Button
                     variant="contained"
                     style={{

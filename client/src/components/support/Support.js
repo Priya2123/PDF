@@ -64,7 +64,7 @@ const Support = (props) => {
                 Hi, How can we help?
               </Typography>
               <Grid container lg={12} md={12} justify="center">
-                <Grid item lg={12} md={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <Box className={classes.text}>
                     <TextField
                       multiline={true}
@@ -86,7 +86,7 @@ const Support = (props) => {
                 justify="center"
                 style={{ marginTop: "1%" }}
               >
-                <Grid item lg={12} md={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <Box className={classes.text}>
                     <TextField
                       multiline={true}
@@ -108,7 +108,7 @@ const Support = (props) => {
                 justify="center"
                 style={{ marginTop: "1%" }}
               >
-                <Grid item lg={12} md={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <Box className={classes.text}>
                     <TextField
                       multiline={true}
@@ -130,7 +130,7 @@ const Support = (props) => {
                 justify="center"
                 style={{ marginTop: "1%" }}
               >
-                <Grid item lg={12} md={12}>
+                <Grid item lg={12} md={12} sm={12} xs={12}>
                   <Box className={classes.text}>
                     <TextField
                       multiline={true}
@@ -152,7 +152,7 @@ const Support = (props) => {
                 justify="center"
                 style={{ paddingTop: "6%" }}
               >
-                <Grid item lg={4} md={4}>
+                <Grid item lg={4} md={4} sm={12} xs={12}>
                   <Button
                     variant="contained"
                     style={{

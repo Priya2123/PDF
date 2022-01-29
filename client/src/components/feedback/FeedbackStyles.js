@@ -4,6 +4,9 @@ export const useStyles = makeStyles((theme) => ({
   heading: {
     fontWeight: "bold",
     color: "purple",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "5vh",
+    },
   },
   rating: {
     color: "purple",
@@ -22,5 +25,13 @@ export const useStyles = makeStyles((theme) => ({
   },
   btn: {
     padding: "40px",
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: "5vh",
+    },
+  },
+  btnsend: {
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: "10vh",
+    },
   },
 }));
