@@ -11,6 +11,9 @@ import Signup from "./login/Signup";
 import Signuplogin from "./signup/Signup";
 import Feedback from "./feedback/Feedback";
 import Notfound from "./notfound/Notfound";
+import Support from "./support/Support";
+import Faq from "./faq/Faq";
+import Tabs from "./tabs/Tabs";
 
 export {
   Nav,
@@ -26,4 +29,7 @@ export {
   Signuplogin,
   Feedback,
   Notfound,
+  Support,
+  Faq,
+  Tabs,
 };

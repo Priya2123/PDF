@@ -7,9 +7,11 @@ import { useForm, Controller } from "react-hook-form";
 import Input from "@material-ui/core/Input";
 import "./style.css";
 import Fade from "react-reveal/Fade";
+import { useTranslation } from "react-i18next";
 
 const Upload = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
   const {
     register,
     errors,
@@ -116,7 +118,7 @@ let handleSubmit = () => {
                 style={{ textAlign: "center" }}
               >
                 <Typography className={classes.heading} variant="h4">
-                  Upload PDF
+                  {t("upload_page")}
                 </Typography>
               </Grid>
             </Grid>
@@ -150,25 +152,25 @@ let handleSubmit = () => {
                     value={college}
                     onChange={(e) => setCollege(e.target.value)}
                   />
-                  <label>Year</label>
+                  <label>{t("upload_page_year")}</label>
                   <input
                     type="tel"
                     value={year}
                     onChange={(e) => setYear(e.target.value)}
                   />
-                  <label>Branch of PDF</label>
+                  <label>{t("upload_page_branch_of_pdf")}</label>
                   <input
                     type="text"
                     value={branch}
                     onChange={(e) => setBranch(e.target.value)}
                   />
-                  <label>Subject of PDF</label>
+                  <label>{t("upload_page_subject_of_pdf")}</label>
                   <input
                     type="text"
                     value={subj}
                     onChange={(e) => setSubj(e.target.value)}
                   />
-                  <label>Upload PDF</label>
+                  <label>{t("upload_page")}</label>
                   <input type="file" name="pdf" style={{ color: "white" }} />
 
                   {/* <label>Title</label>
@@ -183,7 +185,6 @@ let handleSubmit = () => {
                   <option value="Miss">Miss</option>
                   <option value="Dr">Dr</option>
                 </select> */}
-                  
                   {/* <input
                   key={value}
                   type="checkbox"
@@ -216,6 +217,7 @@ let handleSubmit = () => {
                 </div> */}
                   
                   <button type="reset" onClick={sendPost}>Submit</button>
+
                   {/* <input type="reset" type="submit" /> */}
                 </form>
               </Grid>
