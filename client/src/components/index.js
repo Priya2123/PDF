@@ -14,6 +14,8 @@ import Notfound from "./notfound/Notfound";
 import Support from "./support/Support";
 import Faq from "./faq/Faq";
 import Tabs from "./tabs/Tabs";
+import Privacy from "./privacy/Privacy";
+import Privacy2 from "./privacy/Privacy2";
 
 export {
   Nav,
@@ -32,4 +34,6 @@ export {
   Support,
   Faq,
   Tabs,
+  Privacy,
+  Privacy2,
 };

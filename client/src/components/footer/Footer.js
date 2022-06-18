@@ -18,7 +18,8 @@ const Footer = () => {
       justify="center"
       style={{
         textAlign: "center",
-        backgroundColor: "#0f0015",
+        // backgroundColor: "#0f0015",
+        backgroundColor: "#151515",
         padding: "5% 0",
       }}
     >
@@ -27,7 +28,7 @@ const Footer = () => {
           CONNECT
         </Typography>
         <hr width="50%" align="center" size="5" style={{ margin: "auto" }} />
-        <Link to="/feedback">
+        <Link to="/feedback" style={{ textDecoration: "none" }}>
           <Typography
             variant="body1"
             className={classes.text}
@@ -41,17 +42,17 @@ const Footer = () => {
           style={{ backgroundColor: "white", width: "40%" }}
           variant="middle"
         /> */}
-        <Link to="/support">
+        <Link to="/support" style={{ textDecoration: "none" }}>
           <Typography variant="body1" className={classes.text}>
             Support
           </Typography>
         </Link>
-        <Link to="/faq">
+        <Link to="/faq" style={{ textDecoration: "none" }}>
           <Typography variant="body1" className={classes.text}>
             Faq
           </Typography>
         </Link>
-        <Link to="/questions">
+        <Link to="/questions" style={{ textDecoration: "none" }}>
           <Typography variant="body1" className={classes.text}>
             Questions ans answers
           </Typography>
@@ -78,16 +79,20 @@ const Footer = () => {
           POLICY
         </Typography>
         <hr width="50%" align="center" size="5" style={{ margin: "auto" }} />
-        <Typography
-          variant="body1"
-          className={classes.text}
-          style={{ marginTop: "4%" }}
-        >
-          Privacy Policy
-        </Typography>
-        <Typography variant="body1" className={classes.text}>
-          Policy 2
-        </Typography>
+        <Link to="/privacyone" style={{ textDecoration: "none" }}>
+          <Typography
+            variant="body1"
+            className={classes.text}
+            style={{ marginTop: "4%" }}
+          >
+            Privacy Policy
+          </Typography>
+        </Link>
+        <Link to="/privacytwo" style={{ textDecoration: "none" }}>
+          <Typography variant="body1" className={classes.text}>
+            Policy 2
+          </Typography>
+        </Link>
       </Grid>
       <Grid item lg={3} md={3}>
         <Typography variant="h6" className={classes.text}>
