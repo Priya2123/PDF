@@ -14,7 +14,7 @@ const Started = () => {
   const classes = useStyles();
 
 
-  let[user, setUser] = useState([])
+  let[user, setUser] = useState('None')
 
   useEffect(() =>{
     getUser()
@@ -138,7 +138,7 @@ const Started = () => {
   );
         }
   else{
-   window.location.replace('/landing/')
+   window.location.replace('/login/')
   }
 };
 
