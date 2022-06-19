@@ -40,7 +40,7 @@ const getcardBackground = style("mode", {
 });
 const getcardForeground = style("mode", {
   light: "#000",
-  dark: "#EEE",
+  dark: "#fff",
 });
 
 export const StyledPaper = styled(Paper)`
@@ -48,9 +48,15 @@ export const StyledPaper = styled(Paper)`
   color: ${getcardForeground};
 `;
 
+const getfooterborder = style("mode", {
+  light: "1px solid #000",
+  dark: "1px solid #fff",
+});
+
 export const StyledFooterGrid = styled(Grid)`
   background-color: ${getcardBackground};
   color: ${getcardForeground};
+  border-top: ${getfooterborder};
 `;
 
 const getdocBackground = style("mode", {
@@ -76,10 +82,29 @@ const gettypographyForeground = style("mode", {
   light: "#000",
   dark: "#EEE",
 });
+
 export const StyledTypography = styled(Typography)`
   color: ${gettypographyForeground};
 `;
 
+const getAppBarBackground = style("mode", {
+  light: "#7952b3",
+  dark: "transparent",
+});
+const getAppBarForeground = style("mode", {
+  light: "#fff",
+  dark: "#fff",
+});
+
+export const StyledAppBar = styled(AppBar)`
+  background-color: ${getAppBarBackground};
+  color: ${getAppBarForeground};
+`;
+
+//
+//
+//
+//
 //
 export const StyledSkillsMainGrid = styled(Grid)`
   background-color: ${getBackground};
