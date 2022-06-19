@@ -3,14 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
   heading: {
     // color: "#fff",
-    color: "#000",
+    // color: "#000",
     [theme.breakpoints.down("sm")]: {
       marginTop: "8vh",
     },
   },
   pdfhead: {
     // color: "#fff",
-    color: "#000",
+    // color: "#000",
     textAlign: "center",
   },
   cardbutton: {
@@ -20,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   card: {
-    backgroundColor: "#eaeaea",
+    // backgroundColor: "#eaeaea",
   },
   box: {
     [theme.breakpoints.down("sm")]: {
@@ -29,6 +29,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   text: {
     // color: "#fff",
-    color: "#000",
+    // color: "#000",
   },
 }));

@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
     borderRadius: "25px",
     textDecoration: "none",
     // backgroundColor: "#fff",
-    backgroundColor: "#eaeaea",
+    // backgroundColor: "#eaeaea",
     padding: "8px 0",
   },
 }));

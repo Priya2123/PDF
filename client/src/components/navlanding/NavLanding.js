@@ -9,6 +9,7 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Tooltip from "@mui/material/Tooltip";
 import Dropdown from "../nav/Dropdown";
 import { useTranslation } from "react-i18next";
+import ToggleMode from "../../toggle/ToggleMode";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -111,6 +112,7 @@ export default function ButtonAppBar() {
               <ExitToAppIcon style={{ cursor: "pointer", color: "white" }} />
             </Tooltip>
           </div>
+          <ToggleMode />
         </Toolbar>
       </AppBar>
     </div>

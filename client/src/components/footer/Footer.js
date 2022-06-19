@@ -7,11 +7,15 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Link } from "react-router-dom";
+import {
+  StyledFooterGrid,
+  StyledTypography,
+} from "../../toggle/StyledComponents";
 
 const Footer = () => {
   const classes = useStyles();
   return (
-    <Grid
+    <StyledFooterGrid
       container
       lg={12}
       md={12}
@@ -20,7 +24,7 @@ const Footer = () => {
         textAlign: "center",
         borderTop: "1px solid #000",
         // backgroundColor: "#0f0015",
-        backgroundColor: "#eaeaea",
+        // backgroundColor: "#eaeaea",
         padding: "5% 0",
       }}
     >
@@ -30,33 +34,33 @@ const Footer = () => {
         </Typography>
         <hr width="50%" align="center" size="5" style={{ margin: "auto" }} />
         <Link to="/feedback" style={{ textDecoration: "none" }}>
-          <Typography
+          <StyledTypography
             variant="body1"
             className={classes.text}
             style={{ marginTop: "4%" }}
             // underline="none"
           >
             Feedback
-          </Typography>
+          </StyledTypography>
         </Link>
         {/* <Divider
           style={{ backgroundColor: "white", width: "40%" }}
           variant="middle"
         /> */}
         <Link to="/support" style={{ textDecoration: "none" }}>
-          <Typography variant="body1" className={classes.text}>
+          <StyledTypography variant="body1" className={classes.text}>
             Support
-          </Typography>
+          </StyledTypography>
         </Link>
         <Link to="/faq" style={{ textDecoration: "none" }}>
-          <Typography variant="body1" className={classes.text}>
+          <StyledTypography variant="body1" className={classes.text}>
             Faq
-          </Typography>
+          </StyledTypography>
         </Link>
         <Link to="/questions" style={{ textDecoration: "none" }}>
-          <Typography variant="body1" className={classes.text}>
+          <StyledTypography variant="body1" className={classes.text}>
             Questions ans answers
-          </Typography>
+          </StyledTypography>
         </Link>
       </Grid>
       <Grid item lg={3} md={3}>
@@ -81,18 +85,18 @@ const Footer = () => {
         </Typography>
         <hr width="50%" align="center" size="5" style={{ margin: "auto" }} />
         <Link to="/privacyone" style={{ textDecoration: "none" }}>
-          <Typography
+          <StyledTypography
             variant="body1"
             className={classes.text}
             style={{ marginTop: "4%" }}
           >
             Privacy Policy
-          </Typography>
+          </StyledTypography>
         </Link>
         <Link to="/privacytwo" style={{ textDecoration: "none" }}>
-          <Typography variant="body1" className={classes.text}>
+          <StyledTypography variant="body1" className={classes.text}>
             Policy 2
-          </Typography>
+          </StyledTypography>
         </Link>
       </Grid>
       <Grid item lg={3} md={3}>
@@ -109,7 +113,7 @@ const Footer = () => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Typography>
       </Grid>
-    </Grid>
+    </StyledFooterGrid>
   );
 };
 

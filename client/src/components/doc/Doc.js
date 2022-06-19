@@ -1,18 +1,11 @@
 import React from "react";
-import {
-  Grid,
-  Typography,
-  Box,
-  Card,
-  CardActions,
-  CardContent,
-  Button,
-} from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import NavLanding from "../navlanding/NavLanding";
 import Searchbar from "../search/Searchbar";
 import pdf1 from "../../assets/priya_resume.pdf";
 import { useStyles } from "./DocStyles";
 import Footer from "../footer/Footer";
+import { Styleddiv } from "../../toggle/StyledComponents";
 
 const Doc = () => {
   const classes = useStyles();
@@ -44,10 +37,10 @@ const Doc = () => {
     },
   ];
   return (
-    <div
+    <Styleddiv
       style={{
         // backgroundColor: "#271e2a",
-        backgroundColor: "rgba(248, 248, 248, 1)",
+        // backgroundColor: "rgba(248, 248, 248, 1)",
         minHeight: "100vh",
       }}
     >
@@ -122,7 +115,7 @@ const Doc = () => {
         </Grid>
       </Grid>
       <Footer />
-    </div>
+    </Styleddiv>
   );
 };
 

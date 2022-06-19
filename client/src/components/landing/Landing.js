@@ -9,6 +9,7 @@ import upload from "../../assets/upload.png";
 import LandingCard from "./LandingCard";
 import Footer from "../footer/Footer";
 import { useTranslation } from "react-i18next";
+import { Styleddiv, StyledPaper } from "../../toggle/StyledComponents";
 
 const Landing = () => {
   const classes = useStyles();
@@ -52,10 +53,10 @@ const Landing = () => {
     },
   ];
   return (
-    <div
+    <Styleddiv
       style={{
         // backgroundColor: "#271e2a",
-        backgroundColor: "rgba(248, 248, 248, 1)",
+        // backgroundColor: "rgba(248, 248, 248, 1)",
         minHeight: "100vh",
       }}
     >
@@ -75,10 +76,10 @@ const Landing = () => {
       </Grid>
       <Grid container justify="center">
         <Grid item lg={10} md={10} justify="center">
-          <Paper
+          <StyledPaper
             style={{
               // backgroundColor: "#0f0015",
-              backgroundColor: "#eaeaea",
+              // backgroundColor: "#eaeaea",
               marginBottom: "15vh",
               marginTop: "6vh",
             }}
@@ -149,7 +150,7 @@ const Landing = () => {
                 </Typography>
               </div>
             </Grid>
-          </Paper>
+          </StyledPaper>
         </Grid>
       </Grid>
       <Grid container lg={12} md={12} justify="center">
@@ -173,7 +174,7 @@ const Landing = () => {
       </Grid>
       <Footer />
       <div></div>
-    </div>
+    </Styleddiv>
   );
 };
 export default Landing;
