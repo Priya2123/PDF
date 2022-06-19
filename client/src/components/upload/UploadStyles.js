@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   heading: {
-    color: "#000",
+    // color: "#000",
     paddingTop: "4%",
     [theme.breakpoints.down("sm")]: {
       marginTop: "9vh",

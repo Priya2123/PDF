@@ -9,6 +9,7 @@ import "./style.css";
 import Fade from "react-reveal/Fade";
 import { useTranslation } from "react-i18next";
 import Footer from "../footer/Footer";
+import { Styleddiv, StyledPaper } from "../../toggle/StyledComponents";
 
 const Upload = () => {
   const classes = useStyles();
@@ -87,9 +88,7 @@ const Upload = () => {
 
   console.log(errors);
   return (
-    <div
-      style={{ backgroundColor: "rgba(248, 248, 248, 1)", minHeight: "100vh" }}
-    >
+    <Styleddiv style={{ minHeight: "100vh" }}>
       <NavUpload />
       <Fade left>
         <Grid container>
@@ -157,7 +156,7 @@ const Upload = () => {
                     onChange={(e) => setSubj(e.target.value)}
                   />
                   <label>{t("upload_page")}</label>
-                  <input type="file" name="pdf" style={{ color: "white" }} />
+                  <input type="file" name="pdf" style={{ color: "black" }} />
 
                   {/* <label>Title</label>
                 <select
@@ -214,7 +213,7 @@ const Upload = () => {
         </Grid>
       </Fade>
       <Footer />
-    </div>
+    </Styleddiv>
   );
 };
 
