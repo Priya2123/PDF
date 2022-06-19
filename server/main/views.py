@@ -138,6 +138,6 @@ def profile(request):
 @api_view(['GET'])
 def signout(request):
     auth.logout(request)
-    #return redirect('/authlogout/')
+    return redirect('/authlogout/')
     #return render(request, 'home.html', user)
 
