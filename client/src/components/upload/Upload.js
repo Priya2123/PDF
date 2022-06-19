@@ -8,6 +8,7 @@ import Input from "@material-ui/core/Input";
 import "./style.css";
 import Fade from "react-reveal/Fade";
 import { useTranslation } from "react-i18next";
+import Footer from "../footer/Footer";
 
 const Upload = () => {
   const classes = useStyles();
@@ -15,95 +16,80 @@ const Upload = () => {
   const {
     register,
     errors,
-    
+
     getValues,
     // formState: { errors },
   } = useForm();
 
-  let[name, setName] = useState([])
-  let[descrip, setDescrip] = useState([])
-  let[branch, setBranch] = useState([])
-  let[year, setYear] = useState([])
-  let[college, setCollege] = useState([])
-  let[subj, setSubj] = useState([])
-  let[file, setFile] = useState([null])
+  let [name, setName] = useState([]);
+  let [descrip, setDescrip] = useState([]);
+  let [branch, setBranch] = useState([]);
+  let [year, setYear] = useState([]);
+  let [college, setCollege] = useState([]);
+  let [subj, setSubj] = useState([]);
+  let [file, setFile] = useState([null]);
   // useForm({
   //   mode: "onChange",
   // });
   // const atLeastOne = () =>
   //   getValues("test").length ? true : "Please tell me if this is too hard.";
 
-  let[user, setUser] = useState([])
+  let [user, setUser] = useState([]);
 
-  useEffect(() =>{
-    getUser()
-  }, [])
+  useEffect(() => {
+    getUser();
+  }, []);
 
   let getUser = async () => {
-    let response = await fetch('http://127.0.0.1:8000/login/')
-    let data = await response.json()
-    setUser(data)
-  }
-
-  let[status, setStatus] = useState([])
-
-  useEffect(() =>{
-    getStatus()
-  }, [])
-
-  let getStatus = async () => {
-    let response = await fetch('http://127.0.0.1:8000/upload/')
-    let data = await response.json()
-    setStatus(data)
+    let response = await fetch("http://127.0.0.1:8000/login/");
+    let data = await response.json();
+    setUser(data);
   };
 
-  
+  let [status, setStatus] = useState([]);
 
-  if(status=="created"){
-    window.location.replace('/download/')
-  }
-  if(user=="None"){
-    window.location.replace('/login/')
-  }
+  useEffect(() => {
+    getStatus();
+  }, []);
 
+  let getStatus = async () => {
+    let response = await fetch("http://127.0.0.1:8000/upload/");
+    let data = await response.json();
+    setStatus(data);
+  };
+
+  if (status == "created") {
+    window.location.replace("/download/");
+  }
+  if (user == "None") {
+    window.location.replace("/login/");
+  }
 
   let sendPost = async () => {
-    
-    
-    
-    if(status=='Done'){
-      window.location.replace('/download/')
+    if (status == "Done") {
+      window.location.replace("/download/");
     }
 
     var bdata = new FormData();
     var pdfdata = document.querySelector('input[type="file"]').files[0];
     bdata.append("data", pdfdata);
-    let item= {name,descrip,branch,year,subj,college,bdata}
-    await fetch('http://127.0.0.1:8000/upload/',{
+    let item = { name, descrip, branch, year, subj, college, bdata };
+    await fetch("http://127.0.0.1:8000/upload/", {
       method: "POST",
-      
+
       body: JSON.stringify(item),
-      
-    })
-    
-    
-
-    
-  }
-
-
-let handleSubmit = () => {
-    sendPost()
-    
-  
-    
-    
+    });
   };
 
-  
+  let handleSubmit = () => {
+    sendPost();
+  };
+
   console.log(errors);
   return (
-    <div style={{ backgroundColor: "#290d44", minHeight: "100vh" }}>
+    <div
+      style={{ backgroundColor: "rgba(248, 248, 248, 1)", minHeight: "100vh" }}
+    >
       <NavUpload />
       <Fade left>
         <Grid container>
@@ -145,7 +131,7 @@ let handleSubmit = () => {
                     value={descrip}
                     onChange={(e) => setDescrip(e.target.value)}
                   />
-                  
+
                   <label>College</label>
                   <input
                     type="text"
@@ -193,7 +179,7 @@ let handleSubmit = () => {
                     validate: atLeastOne,
                   })}
                 /> */}
-                  
+
                   {/* <div
                   style={{
                     display: "flex",
@@ -215,8 +201,10 @@ let handleSubmit = () => {
                     Yes
                   </label>
                 </div> */}
-                  
-                  <button type="reset" onClick={sendPost}>Submit</button>
+
+                  <button type="reset" onClick={sendPost}>
+                    Submit
+                  </button>
 
                   {/* <input type="reset" type="submit" /> */}
                 </form>
@@ -225,6 +213,7 @@ let handleSubmit = () => {
           </Grid>
         </Grid>
       </Fade>
+      <Footer />
     </div>
   );
 };

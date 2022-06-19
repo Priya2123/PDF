@@ -12,6 +12,7 @@ import NavLanding from "../navlanding/NavLanding";
 import Searchbar from "../search/Searchbar";
 import pdf1 from "../../assets/priya_resume.pdf";
 import { useStyles } from "./DocStyles";
+import Footer from "../footer/Footer";
 
 const Doc = () => {
   const classes = useStyles();
@@ -43,7 +44,13 @@ const Doc = () => {
     },
   ];
   return (
-    <div style={{ backgroundColor: "#271e2a", minHeight: "100vh" }}>
+    <div
+      style={{
+        // backgroundColor: "#271e2a",
+        backgroundColor: "rgba(248, 248, 248, 1)",
+        minHeight: "100vh",
+      }}
+    >
       <NavLanding />
       <Grid
         container
@@ -114,6 +121,7 @@ const Doc = () => {
           {/* {pdf1} */}
         </Grid>
       </Grid>
+      <Footer />
     </div>
   );
 };

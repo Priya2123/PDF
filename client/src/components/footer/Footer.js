@@ -18,8 +18,9 @@ const Footer = () => {
       justify="center"
       style={{
         textAlign: "center",
+        borderTop: "1px solid #000",
         // backgroundColor: "#0f0015",
-        backgroundColor: "#151515",
+        backgroundColor: "#eaeaea",
         padding: "5% 0",
       }}
     >

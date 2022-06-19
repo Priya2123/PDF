@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
   nav: {
     paddingTop: "1%",
     paddingBottom: "0.5%",
-    backgroundColor: "transparent",
+    // backgroundColor: "transparent",
+    backgroundColor: "#7952b3",
     // position: "fixed",
     fontFamily: "Montserrat, tahoma, verdana, sans-serif",
     justifyContent: "center",

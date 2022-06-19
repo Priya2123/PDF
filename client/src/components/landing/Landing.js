@@ -52,7 +52,13 @@ const Landing = () => {
     },
   ];
   return (
-    <div style={{ backgroundColor: "#271e2a", minHeight: "100vh" }}>
+    <div
+      style={{
+        // backgroundColor: "#271e2a",
+        backgroundColor: "rgba(248, 248, 248, 1)",
+        minHeight: "100vh",
+      }}
+    >
       <NavLanding />
       <Grid
         container
@@ -71,7 +77,8 @@ const Landing = () => {
         <Grid item lg={10} md={10} justify="center">
           <Paper
             style={{
-              backgroundColor: "#0f0015",
+              // backgroundColor: "#0f0015",
+              backgroundColor: "#eaeaea",
               marginBottom: "15vh",
               marginTop: "6vh",
             }}

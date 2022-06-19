@@ -19,8 +19,7 @@ const useStyles = makeStyles((theme) => ({
   nav: {
     paddingTop: "1%",
     paddingBottom: "0.5%",
-    backgroundColor: "transparent",
-    // position: "fixed",
+    backgroundColor: "#7952b3",
     fontFamily: "Montserrat, tahoma, verdana, sans-serif",
     justifyContent: "center",
     alignItems: "center",
@@ -39,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     "&:hover": {
       textDecoration: "underline",
-      // borderBottom: "1px solid #fff",
     },
   },
 }));
