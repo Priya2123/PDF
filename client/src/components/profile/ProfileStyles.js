@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "25vw",
     margin: "auto",
     marginTop: "22vh",
-    borderRadius: "10px",
+    borderRadius: "50%",
     [theme.breakpoints.down("sm")]: {
       width: "90vw",
       margin: "auto",
@@ -26,5 +26,21 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       // marginLeft: "5vw",
     },
+  },
+  root: {
+    alignSelf: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+  },
+  input: {
+    display: "none",
+  },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
   },
 }));

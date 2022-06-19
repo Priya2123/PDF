@@ -15,6 +15,8 @@ import {
   Support,
   Faq,
   Tabs,
+  Privacy,
+  Privacy2,
 } from "./components";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -51,6 +53,8 @@ const App = () => {
             <Route exact path="/support" component={Support} />
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/questions" component={Tabs} />
+            <Route exact path="/privacyone" component={Privacy} />
+            <Route exact path="/privacytwo" component={Privacy2} />
             <Route component={Notfound} />
           </Switch>
         </Router>

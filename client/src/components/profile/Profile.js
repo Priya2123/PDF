@@ -1,5 +1,15 @@
 import React, { useEffect } from "react";
-import { Grid, Typography } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  Chip,
+  Fade,
+  Modal,
+  Box,
+  Backdrop,
+  IconButton,
+  Avatar,
+} from "@material-ui/core";
 import { useStyles } from "./ProfileStyles";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -15,6 +25,7 @@ import { connect } from "react-redux";
 import { useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import allactions from "../../redux/actions";
+import ModalProfile from "./ModalProfile";
 
 const Profile = (props) => {
   const classes = useStyles();
@@ -146,10 +157,30 @@ const Profile = (props) => {
             </Grid>
           </Grid>
           <Grid item lg={2} md={2}></Grid>
-          <Grid item lg={3} md={3}>
-            <img src={pic} alt="" className={classes.image} />
-
-            <Grid
+          <Grid item lg={3} md={3} style={{ marginTop: "10vh" }}>
+            {/* <img src={pic} alt="" className={classes.image} /> */}
+            <ModalProfile />
+            {/* <div className={classes.root}>
+              <input
+                accept="image/*"
+                className={classes.input}
+                id="icon-button-file"
+                type="file"
+              />
+              <label htmlFor="icon-button-file">
+                <IconButton
+                  color="primary"
+                  aria-label="upload picture"
+                  component="span"
+                >
+                  <Avatar
+                    src="https://www.w3schools.com/howto/img_avatar.png"
+                    className={classes.large}
+                  />
+                </IconButton>
+              </label>
+            </div> */}
+            {/* <Grid
               container
               lg={12}
               md={12}
@@ -161,7 +192,7 @@ const Profile = (props) => {
               <TwitterIcon className={classes.icon} />
               <LinkedInIcon className={classes.icon} />
               <InstagramIcon className={classes.icon} />
-            </Grid>
+            </Grid> */}
           </Grid>
           <Grid item lg={1} md={1}></Grid>
         </Grid>
