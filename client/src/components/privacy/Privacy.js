@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
   const classes = useStyles();
   return (
     <>
-      <div style={{ backgroundColor: "#202020", color: "#eee" }}>
+      <div style={{ backgroundColor: "rgba(248, 248, 248, 1)" }}>
         <Grid container lg={12} md={12} xs={12} sm={12}>
           <Grid item lg={12} md={12} xs={12} sm={12}>
             <Typography variant="h2" className={classes.text} justify="center">

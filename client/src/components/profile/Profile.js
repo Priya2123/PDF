@@ -54,7 +54,10 @@ const Profile = (props) => {
           container
           lg={12}
           md={12}
-          style={{ backgroundColor: "#f9f9f3", minHeight: "100vh" }}
+          style={{
+            backgroundColor: "rgba(248, 248, 248, 1)",
+            minHeight: "100vh",
+          }}
         >
           <Grid item lg={1} md={1}></Grid>
           <Link to="/landing">

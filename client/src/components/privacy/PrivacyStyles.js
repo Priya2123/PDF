@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "5rem",
     paddingBottom: "1.4rem",
     fontWeight: "bold",
-    color: "#eee",
+    color: "purple",
     letterSpacing: "0.1rem",
     textAlign: "center",
     [theme.breakpoints.down("xs")]: {
@@ -19,7 +19,7 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "2.5rem",
     paddingBottom: "1.7rem",
     fontWeight: "bold",
-    color: "#eee",
+    color: "#000",
     letterSpacing: "0.1rem",
     textAlign: "center",
     [theme.breakpoints.down("xs")]: {
@@ -34,7 +34,6 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: "2.8rem",
     paddingBottom: "1.4rem",
     letterSpacing: "0.1rem",
-    // color: "#c4c4c4"
     [theme.breakpoints.down("xs")]: {
       fontSize: "1.2rem",
     },
@@ -43,7 +42,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   textbody: {
-    color: "#c4c4c4",
+    color: "#494848",
     [theme.breakpoints.down("xs")]: {
       fontSize: "0.8rem",
     },
@@ -52,7 +51,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   textbodylast: {
-    color: "#c4c4c4",
+    color: "#494848",
     paddingBottom: "5rem",
     [theme.breakpoints.down("xs")]: {
       fontSize: "0.8rem",
