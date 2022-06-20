@@ -138,7 +138,7 @@ const Started = () => {
   );
         }
   else{
-   window.location.replace('/login/')
+   window.location.replace('/landing/')
   }
 };
 

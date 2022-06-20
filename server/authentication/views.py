@@ -18,37 +18,40 @@ login_status="None"
 username=""
 password=""
 
-@api_view(['POST'])
+@api_view(['POST','GET'])
 def signup(request):
     global current_user
-    data= request.data
-    username= data['username']
-    name= data['name']
-    college= data['college']
-    year= data['year']
-    branch= data['branch']
-    password= data['password']
-    cpassword= data['cpassword']
-    
-    cnf_user= Users.object.get(username= username)
+    if request.method =='POST':
+        data= request.data
+        username= data['username']
+        name= data['Name']
+        college= data['college']
+        year= data['year']
+        branch= data['branch']
+        password= data['password']
+        cpassword= data['confirmpassword']
+        
+        cnf_user= Users.objects.filter(username= username).exists()
 
-    if(cnf_user):
-        Response(['username already taken'])
+        if(cnf_user):
+            return Response(['username already taken'])
 
-    if(len(password)<8):
-        Response(['Password should be minnimum 8 characters'])
-    if(not(password==cpassword)):
-        Response(['Confirm password not same '])
-    
-    user, created = Users.objects.get_or_create(name=name, username= username, college= college, year=year, branch=branch)
-    if created:
-        user.set_password(password)
-        user.save()
-        print("Done")
-        auth.login(request, user,backend='django.contrib.auth.backends.ModelBackend')
-        current_user=user
-        Response(['Done'])
-    Response(['None'])
+        if(len(password)<8):
+            return  Response(['Password should be minnimum 8 characters'])
+        if(not(password==cpassword)):
+            return Response(['Confirm password not same '])
+        
+        user, created = Users.objects.get_or_create(name=name, username= username, college= college, year=year, branch=branch)
+        if created:
+            user.set_password(password)
+            user.save()
+            print("Done")
+            auth.login(request, user,backend='django.contrib.auth.backends.ModelBackend')
+            current_user=user
+            return Response(['Done'])
+    if current_user==None:
+        return(Response(['None']))
+    return Response(['Logged in'])
 
 
 '''def signin(request):
@@ -74,8 +77,9 @@ def login_page(request):
     global username
     global password
     if(request.method=="GET"):
-        if not(current_user==None):
-            login_status=('Already Logged in')
+        print(current_user)
+        if not(current_user):
+            login_status=('None')
         
         return Response(login_status)
             

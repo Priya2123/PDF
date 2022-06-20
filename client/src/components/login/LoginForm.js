@@ -149,7 +149,7 @@ const LoginForm = (props) => {
               </div>
               <h3 className="signup1" style={{ color: "#999999" }}>
                 New to PDF Finder?{" "}
-                <Link to="/signup">
+                <Link to="/signuplogin">
                   <span
                     style={{ cursor: "pointer", color: "white" }}
                     onClick={() => handlebuttonSignup()}
