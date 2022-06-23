@@ -140,3 +140,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 APPEND_SLASH = False
 LOGIN_REDIRECT_URL = "/profile/"
 LOGOUT_REDIRECT_URL = "/authlogout/"
+
+import django_heroku
+django_heroku.settings(locals())
