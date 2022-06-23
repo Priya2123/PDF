@@ -106,9 +106,10 @@ const About = () => {
                 Priya Aggarwal
               </Typography>
               <Typography variant="h6" className={classes.aboutppl}>
-                me no bhand blah blah blah blah blah blah blah blah blah blah
-                blah blah blah blah blah blah blah blah blah blah blah blah blah
-                blah blah blah
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
               </Typography>
             </Grid>
           </Grid>
@@ -125,9 +126,10 @@ const About = () => {
                 Mayank Nagpal
               </Typography>
               <Typography variant="h6" className={classes.aboutppl}>
-                bhak bhosdike. babaji blah blah blah blah blah blah blah blah
-                blah blah blah blah blah blah blah blah blah blah blah blah blah
-                blah blah blah blah blah
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
               </Typography>
             </Grid>
             <Grid item sm={8} xs={8} lg={6} md={6}>
@@ -163,9 +165,10 @@ const About = () => {
                 Mayank Nagpal
               </Typography>
               <Typography variant="h6" className={classes.aboutppl}>
-                bhak bhosdike. babaji blah blah blah blah blah blah blah blah
-                blah blah blah blah blah blah blah blah blah blah blah blah blah
-                blah blah blah blah blah
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
               </Typography>
             </Grid>
           </Grid>
@@ -207,9 +210,10 @@ const About = () => {
                 Rishi Kumar
               </Typography>
               <Typography variant="h6" className={classes.aboutppl}>
-                daaru laaye aaj blah blah blah blah blah blah blah blah blah
-                blah blah blah blah blah blah blah blah blah blah blah blah blah
-                blah blah blah blah
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
               </Typography>
             </Grid>
           </Grid>

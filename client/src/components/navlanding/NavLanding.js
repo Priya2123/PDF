@@ -10,7 +10,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Dropdown from "../nav/Dropdown";
 import { useTranslation } from "react-i18next";
 import ToggleMode from "../../toggle/ToggleMode";
-import { StyledAppBar, StyledPaper } from "../../toggle/StyledComponents";
+import { StyledAppBar } from "../../toggle/StyledComponents";
 
 const useStyles = makeStyles((theme) => ({
   root: {
