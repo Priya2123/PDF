@@ -28,7 +28,7 @@ const LoginForm = (props) => {
   }, [])
 
   let getUser = async () => {
-    let response = await fetch('http://127.0.0.1:8000/login/')
+    let response = await fetch('https://pdffinderapi.herokuapp.com/login/')
     let data = await response.json()
     setUser(data)
   }
@@ -45,7 +45,7 @@ const LoginForm = (props) => {
       window.location.replace('/profile/')
     }
     let item= {username,password}
-    await fetch('http://127.0.0.1:8000/login/',{
+    await fetch('https://pdffinderapi.herokuapp.com/login/',{
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
