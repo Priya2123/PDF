@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, TextField, InputBase } from "@material-ui/core";
 import { useStyles } from "./SearchbarStyles";
+import { StyledInputBase } from "../../toggle/StyledComponents";
 
 const Searchbar = () => {
   const classes = useStyles();
@@ -14,7 +15,7 @@ const Searchbar = () => {
           variant="outlined"
         />
       </Box> */}
-      <InputBase
+      <StyledInputBase
         className={classes.search}
         placeholder="Search "
         //   onChange={(e) => setText(e.target.value)}

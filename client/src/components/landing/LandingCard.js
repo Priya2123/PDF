@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import { useStyles } from "./LandingStyles";
 import { Link } from "react-router-dom";
+import { StyledCard } from "../../toggle/StyledComponents";
 
 const LandingCard = (props) => {
   const classes = useStyles();
@@ -22,7 +23,7 @@ const LandingCard = (props) => {
       xs={10}
       className={classes.box}
     >
-      <Card sx={{ minWidth: 275 }} className={classes.card}>
+      <StyledCard sx={{ minWidth: 275 }} className={classes.card}>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             {props.subhead}
@@ -55,7 +56,7 @@ const LandingCard = (props) => {
             <Typography variant="body1">({props.number})</Typography>
           </div>
         </CardActions>
-      </Card>
+      </StyledCard>
     </Grid>
   );
 };

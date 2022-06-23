@@ -9,6 +9,8 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Tooltip from "@mui/material/Tooltip";
 import Dropdown from "../nav/Dropdown";
 import { useTranslation } from "react-i18next";
+import ToggleMode from "../../toggle/ToggleMode";
+import { StyledAppBar, StyledPaper } from "../../toggle/StyledComponents";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
   nav: {
     paddingTop: "1%",
     paddingBottom: "0.5%",
-    backgroundColor: "transparent",
+    // backgroundColor: "transparent",
+    // backgroundColor: "#7952b3",
     // position: "fixed",
     fontFamily: "Montserrat, tahoma, verdana, sans-serif",
     justifyContent: "center",
@@ -50,7 +53,7 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.nav}>
+      <StyledAppBar position="static" className={classes.nav}>
         <Toolbar>
           <img
             style={{ height: "9%", width: "9%", zIndex: "101" }}
@@ -110,8 +113,9 @@ export default function ButtonAppBar() {
               <ExitToAppIcon style={{ cursor: "pointer", color: "white" }} />
             </Tooltip>
           </div>
+          <ToggleMode />
         </Toolbar>
-      </AppBar>
+      </StyledAppBar>
     </div>
   );
 }
