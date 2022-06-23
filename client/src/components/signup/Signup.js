@@ -30,7 +30,7 @@ const Signup = () => {
   }, [])
 
   let getUser = async () => {
-    let response = await fetch('http://127.0.0.1:8000/signup/')
+    let response = await fetch('https://pdffinderapi.herokuapp.com/signup/')
     let data = await response.json()
     setUser(data)
   }
@@ -47,7 +47,7 @@ const Signup = () => {
       window.location.replace('/profile/')
     }
     let item= {username, Name ,college,year,branch,password, confirmpassword}
-    await fetch('http://127.0.0.1:8000/signup/',{
+    await fetch('https://pdffinderapi.herokuapp.com/signup/',{
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

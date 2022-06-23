@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%hfs$euswcodw!1ejw1(c!d+t(h525dch1j0rlc4=63xfq5rad'
+#SECRET_KEY = '%hfs$euswcodw!1ejw1(c!d+t(h525dch1j0rlc4=63xfq5rad'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -140,3 +140,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 APPEND_SLASH = False
 LOGIN_REDIRECT_URL = "/profile/"
 LOGOUT_REDIRECT_URL = "/authlogout/"
+
+import django_heroku
+django_heroku.settings(locals())
