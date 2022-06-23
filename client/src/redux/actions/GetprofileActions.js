@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const profiledata = () => async (dispatch) => {
   try {
-    const res = await axios.get("http://127.0.0.1:8000/profile/");
+    const res = await axios.get("https://pdffinderapi.herokuapp.com/profile/");
     console.log("data", res.data);
     dispatch({
       type: GET_PROFILE,
